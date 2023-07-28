@@ -1,5 +1,3 @@
-'use client';
-
 import { useState } from 'react';
 import styles from './Header.module.scss';
 import SidebarLoggedInWithoutImage from '/components/layouts/sidebar/SidebarImageNameHandler/sidebarLoggedInWithoutImage';

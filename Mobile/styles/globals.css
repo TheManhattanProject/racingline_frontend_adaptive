@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Montserrat';
-  src: url('/static/fonts/Montserrat/Montserrat-Medium.ttf');
+  src: url('/mstatic/fonts/Montserrat/Montserrat-Medium.ttf');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'Montserrat';
-  src: url('/static/fonts/Montserrat/Montserrat-SemiBold.ttf');
+  src: url('/mstatic/fonts/Montserrat/Montserrat-SemiBold.ttf');
   font-style: normal;
   font-weight: 600;
   font-display: swap;
@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: url('/static/fonts/Poppins/Poppins-Medium.ttf');
+  src: url('/mstatic/fonts/Poppins/Poppins-Medium.ttf');
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -24,21 +24,21 @@
 
 @font-face {
   font-family: 'OstwaldEL';
-  src: url('../static/fonts/Ostwald/Oswald-ExtraLight.ttf');
+  src: url('/mstatic/fonts/Ostwald/Oswald-ExtraLight.ttf');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'OstwaldL';
-  src: url('../static/fonts/Ostwald/Oswald-Light.ttf');
+  src: url('/mstatic/fonts/Ostwald/Oswald-Light.ttf');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'OstwaldM';
-  src: url('../static/fonts/Ostwald/Oswald-Medium.ttf');
+  src: url('/mstatic/fonts/Ostwald/Oswald-Medium.ttf');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -46,28 +46,28 @@
 
 @font-face {
   font-family: 'Ostwald';
-  src: url('../static/fonts/Ostwald/Oswald-Regular.ttf');
+  src: url('/mstatic/fonts/Ostwald/Oswald-Regular.ttf');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'OstwaldB';
-  src: url('../static/fonts/Ostwald/Oswald-Bold.ttf');
+  src: url('/mstatic/fonts/Ostwald/Oswald-Bold.ttf');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Dev Gothic';
-  src: url('../static/fonts/DevGothic/devgothic.TTF');
+  src: url('/mstatic/fonts/DevGothic/devgothic.TTF');
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Digital Numbers';
-  src: url('../static/fonts/DigitalNumbers/DigitalNumbers-Regular.woff');
+  src: url('/mstatic/fonts/DigitalNumbers/DigitalNumbers-Regular.woff');
   font-style: normal;
   font-display: swap;
 }
