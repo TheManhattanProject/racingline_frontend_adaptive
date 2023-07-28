@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.mains {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  /* overflow-x: hidden; */
+  /* position: relative; */
+  /* justify-content: center; */
+  align-items: center;
+}
+.headerimg {
+  width: 277px;
+  height: 104px;
+}
+.logoContainer {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  justify-content: flex-end;
+  height: 104px;
+}
+
+.context {
+  display: flex;
+  vertical-align: middle;
+  /* margin-top: 11vh; */
+  /* margin-left: auto;
+      margin-right: auto; */
+  /* gap: 390px; */
+  margin: 0 auto;
+  /* position: relative; */
+  flex-direction: column;
+}
+
+.title_bold {
+  font-family: 'Dev Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  /* RL/Secondary Black - F */
+
+  color: #282828;
+  margin: 0 auto;
+}
+
+.title_simple {
+  font-family: 'Ostwald';
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  /* RL/Primary Red */
+  margin: 0;
+  margin: 15px 0 0 0;
+  color: #d40000;
+}
+
+.title {
+  width: 295px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.error_image_div {
+  position: relative;
+  padding: auto;
+  margin: 40px 0 0 0;
+  /* width: 95vw; */
+  display: flex;
+  justify-content: center;
+}
+.error_image {
+  height: calc((235 / 365) * 95vw);
+  width: 95vw;
+  object-fit: cover;
+  position: relative !important;
+  margin: auto;
+  max-width: 450px;
+  max-height: 290px;
+}
+
+.buttonContainer {
+  display: flex;
+  padding: 0 17px;
+  margin: 60px 0 0 0;
+}
+
+.button {
+  background: #282828;
+  border-radius: 18px;
+  padding: 20px 0px;
+  border: 0;
+
+  font-family: 'Ostwald';
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+
+  color: #ffffff;
+}
+
+@media screen and (min-width: 761px) {
+  .mains {
+    display: none !important;
+  }
+}

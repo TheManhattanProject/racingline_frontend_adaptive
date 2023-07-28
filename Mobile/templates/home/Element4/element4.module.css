@@ -1,0 +1,426 @@
+.element4 {
+  background-color: white;
+}
+
+.element4row1 {
+  display: flex;
+}
+
+.zerospace {
+  margin: 0;
+  padding: 0;
+}
+
+.checkboxCont {
+  width: 33.4vw;
+  background: url('/public/mstatic/home/element4/checkbox2.png');
+  background-repeat: repeat-x;
+  background-size: 145px;
+  height: 55.16px;
+}
+
+.checkbox {
+  width: 145px;
+  height: 55.16px;
+  margin-right: 15px;
+  display: none;
+}
+
+.element4row1title {
+  font-family: 'Dev Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  /* margin-top: 10px; */
+  color: #0a0a0a;
+  margin-left: 2rem;
+}
+
+.element4row1description {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+  margin-top: -5px;
+  letter-spacing: 0.04em;
+  margin-left: 2rem;
+  color: #a19d9a;
+}
+
+.element4Text {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+
+  color: #0a0a0a;
+
+  width: 90vw;
+  margin: auto;
+  margin-top: 28px;
+  margin-bottom: 42px;
+}
+
+.element4row2 {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: auto;
+  min-height: 910px;
+  justify-content: space-between;
+}
+
+.track {
+  width: 17px;
+  transform: translateX(-38px);
+  background-repeat: repeat;
+  z-index: 0;
+  padding-top: 10px;
+}
+
+.p41 {
+  margin-bottom: 104px;
+}
+
+.p42 {
+  margin-bottom: 80px;
+}
+
+.p43 {
+  margin-bottom: 49px;
+}
+
+.p44 {
+  margin-bottom: 44px;
+}
+
+.numbers {
+  width: 55px;
+  height: 55px;
+
+  background: #f13e3e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 33px;
+  letter-spacing: 0.04em;
+  z-index: 2;
+  color: #f9f9f9;
+  position: relative;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+}
+
+.h41,
+.h42,
+.h43,
+.h44 {
+  font-family: 'Dev Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.04em;
+  padding-left: 9px;
+  color: #f13e3e;
+  margin-top: 12px;
+}
+
+.p41,
+.p42,
+.p43,
+.p44 {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+  padding-left: 9px;
+  color: #282828;
+  width: 100%;
+}
+
+.element4rowtext {
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  z-index: 1;
+}
+
+.lastbox {
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-family: 'Dev Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.04em;
+  gap: 20px;
+  color: #0a0a0a;
+}
+
+.checkboximage {
+  height: 24.631895065307617px;
+  width: 64.75025939941406px;
+}
+
+.element4Text2 {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  width: 90vw;
+  margin: 79px auto 30px auto;
+  color: #f13e3e;
+}
+
+.element4Text3 {
+  height: 114px;
+  background: #282828;
+  font-family: 'Dev Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 26px;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  text-align: center;
+  letter-spacing: 0.04em;
+  /* padding:0 22.5vw; */
+  /* margin: 0 auto; */
+  color: #ffffff;
+  justify-content: center;
+}
+
+.checkboxBackground {
+  height: 38px;
+  width: 100%;
+  background: url(/public/mstatic/home/element4/checkbox2.png);
+  background-repeat: repeat-x;
+  background-size: contain;
+  margin-top: -1px;
+}
+
+.element4Text4 {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+
+  color: #282828;
+  width: 90vw;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.element4Text5 {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 39px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  letter-spacing: 0.04em;
+
+  color: #d40000;
+  margin-bottom: 30px;
+}
+
+.element4Text5 > span {
+  border-top: 2px solid #d40000;
+  height: 18px;
+  width: calc(50vw - 140px);
+}
+
+.element4Text6 {
+  height: 205px;
+  max-width: 428px;
+  background: url(/public/mstatic/home/element4/ballbackground.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: 0.04em;
+
+  color: #f9f9f9;
+
+  display: flex;
+  /* padding-right: 39px; */
+  justify-content: flex-end;
+  /* padding-left: 164px; */
+}
+
+.Rimg {
+  height: auto;
+  width: 80vw;
+  margin-left: 28px;
+  margin-bottom: 52px;
+}
+
+.element4Text7 {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 47px;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+
+  color: #d40000;
+  margin: 24px 0;
+}
+
+.element4text6top {
+  background-color: rgb(40, 40, 40);
+  height: auto;
+  position: relative;
+}
+
+.element4Text6text {
+  position: absolute;
+  left: 162px;
+  right: 40px;
+  top: 39px;
+}
+
+@media screen and (max-width: 427px) {
+  .element4text6top {
+    min-height: 230px;
+  }
+
+  .element4Text6 {
+    transform: translateY(15px);
+  }
+
+  .element4Text6text {
+    transform: translateY(-15px);
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .element4row1 {
+    width: 100vw;
+  }
+
+  .element4row1 > div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .checkbox {
+    background-repeat: repeat-x;
+  }
+
+  .element4Text {
+    width: 388px;
+  }
+
+  .element4row2 {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .h41,
+  .h42,
+  .h43,
+  .h44 {
+    width: 306px;
+  }
+
+  .p41,
+  .p42,
+  .p43,
+  .p44 {
+    width: 366px;
+  }
+
+  .lastbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  .element4Text2 {
+    width: 386px;
+  }
+
+  .element4Text4 {
+    width: 455px;
+    margin-bottom: 80px;
+  }
+
+  .Rimg {
+    width: 355px;
+    height: auto;
+  }
+
+  .rimgcont {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* .element4Text6text{
+        width: 351px;
+        margin-left: 18vw;
+    }
+     */
+}
+
+@media only screen and (max-width: 800px) {
+  .checkboxCont {
+    background: none;
+    width: 145px;
+    height: 55.16px;
+    /* margin-right: 6rem; */
+  }
+
+  .checkbox {
+    display: block;
+    width: 145px;
+    height: 55.16px;
+    margin-right: 0px;
+  }
+}
