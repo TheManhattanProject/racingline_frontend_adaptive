@@ -9,9 +9,9 @@ export default function Index() {
 //   //   return `${src}?w=${width}&q=${quality || 75}`
 //   // }
 
-//   const imageLoader = ({ src, width, quality }) => {
-//     return `${src}`
-//   }
+  // const imageLoader = ({ src, width, quality }) => {
+  //   return `${src}`
+  // }
 
 
 
