@@ -1,0 +1,74 @@
+.bottomBorder {
+  height: 3px;
+  width: 100%;
+  background-color: #0a0a0a;
+
+  @media (max-width: 780px) {
+    height: 2px;
+  }
+}
+
+.bottomBorder.error {
+  background-color: red;
+}
+
+.errorMsg {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #D40000;
+}
+
+.inputContainer {
+  font-family: "Ostwald";
+
+  input {
+    height: 60px;
+    width: 100%;
+    border: 0px;
+    margin: auto;
+    font-family: "OstwaldL";
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 2px;
+    padding: 21px 28px;
+    color: #0a0a0a;
+
+    &::placeholder {
+      text-transform: uppercase;
+      color: #0a0a0a;
+      font-family: "Ostwald";
+      // padding: 1rem 0.5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (max-width:1280px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  @media (max-width: 780px) {
+    input {
+      font-size: 20px;
+    }
+  }
+}
+
+.inputContainer.error {
+  input {
+    color: red;
+
+    &::placeholder {
+      color: red;
+    }
+  }
+}

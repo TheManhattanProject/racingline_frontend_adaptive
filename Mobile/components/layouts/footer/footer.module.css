@@ -102,7 +102,7 @@
 @media only screen and (max-width: 790px) {
   .track {
     height: 140px;
-    background-image: url('/static/questions/road.png');
+    background-image: url('../../../public/mstatic/questions/road.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

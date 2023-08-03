@@ -1,0 +1,106 @@
+.inputfield{
+    height: 60px;
+    width: 100%;
+    border: 0px;
+    margin: auto;
+    font-family: "OstwaldL";
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 2px;
+    padding: 21px 28px;
+    color: #0a0a0a;
+    &::placeholder {
+      text-transform: uppercase;
+      color: #0a0a0a;
+      font-family: "Ostwald";
+      // padding: 1rem 0.5rem;
+    }
+    &:focus {
+      outline: none;
+    }
+    @media (max-width:1280px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+}
+
+.bottomBorder {
+  height: 3px;
+  width: 100%;
+  background-color: #0a0a0a;
+  @media (max-width:780px) {
+    height: 2px;
+  }
+}
+
+.tags_input{
+  margin-top: 1rem;
+  font-family: 'OstwaldEL';
+  font-size: 1.5rem;
+  width: 100%;
+  @media (max-width: 780px) {
+    font-size: 1rem;
+  }
+  ul{
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+    li{
+      // min-width: 30%;
+      word-break: break-word;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      padding: 0.2rem 1rem;
+      background-color: #EEEEEE;
+      border-radius: 10px;
+      border: 1px solid #CCCCCC;
+      @media (max-width: 600px) {
+        min-width: 25%;
+      }
+      .tag_close_icon{
+        font-size: 1rem;
+      }
+      .tag_title{
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+}
+
+.suggest{
+  margin-top: 1rem;
+  @media (max-width:780px)
+  {
+    display: none !important;
+  }
+}
+
+.errorMsg {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #D40000;
+}
+
+.interestInput.error {
+  input {
+    color: red;
+
+    &::placeholder {
+      color: red;
+    }
+  }
+}
+
+.bottomBorder.error {
+  background-color: red;
+}

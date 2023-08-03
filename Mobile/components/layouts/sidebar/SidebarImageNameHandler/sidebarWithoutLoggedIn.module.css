@@ -43,9 +43,7 @@
   line-height: 20px;
   display: flex;
   align-items: flex-start;
-  color: #d40000;
-  /* margin-bottom: 1.5rem; */
-  margin-left: 20px;
+  color: #d40000; 
 }
 
 .loginContainer {
@@ -65,7 +63,7 @@
   line-height: 26px;
 
   text-decoration: none;
-  color: #0d6efd;
+  color: #525252;
   margin: 20px 0;
 }
 
@@ -81,12 +79,11 @@
   color: #525252;
   margin-bottom: 1.2rem !important;
   margin-top: 1rem;
-  margin-left: 20px;
 }
 
 .NotLoggedInDiv {
   /* text-align: center; */
   margin-top: 70px;
-  margin-left: 26px;
+  margin-left: 40px;
   margin-right: 50px;
 }

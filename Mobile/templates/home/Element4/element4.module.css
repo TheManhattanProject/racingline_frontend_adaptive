@@ -13,7 +13,7 @@
 
 .checkboxCont {
   width: 33.4vw;
-  background: url('/public/mstatic/home/element4/checkbox2.png');
+  background: url('../../../public/mstatic/home/element4/checkbox2.png');
   background-repeat: repeat-x;
   background-size: 145px;
   height: 55.16px;
@@ -80,6 +80,7 @@
 
 .track {
   width: 17px;
+  height: 350px;
   transform: translateX(-38px);
   background-repeat: repeat;
   z-index: 0;
@@ -165,6 +166,7 @@
   flex-direction: row;
   gap: 3px;
   z-index: 1;
+  height: 350px;
 }
 
 .lastbox {
@@ -222,7 +224,7 @@
 .checkboxBackground {
   height: 38px;
   width: 100%;
-  background: url(/public/mstatic/home/element4/checkbox2.png);
+  background: url(../../../public/mstatic/home/element4/checkbox2.png);
   background-repeat: repeat-x;
   background-size: contain;
   margin-top: -1px;
@@ -269,7 +271,7 @@
 .element4Text6 {
   height: 205px;
   max-width: 428px;
-  background: url(/public/mstatic/home/element4/ballbackground.png);
+  background: url(../../../public/mstatic/home/element4/ballbackground.png);
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -422,5 +424,41 @@
     width: 145px;
     height: 55.16px;
     margin-right: 0px;
+  }
+}
+
+.rImagecont {
+  width: 100%;
+  display: grid;
+  place-content: center;
+  margin-bottom: 80px;
+}
+
+.rImagecont img {
+  width: 90%;
+  height: 200px;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 400px) {
+  .element4row1 {
+display: flex;
+align-items: center;
+flex-direction: column;
+  }
+  .checkboxCont { 
+    width: 100%; 
+  }
+  .checkboxCont img { 
+    width: 100%; 
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .lastbox {
+    margin-top: 80px;
+  }
+  .track  {
+height: 425px;
   }
 }

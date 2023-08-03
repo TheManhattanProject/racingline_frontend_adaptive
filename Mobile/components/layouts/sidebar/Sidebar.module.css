@@ -4,7 +4,14 @@
   border-radius: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+left: -1000px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: fit-content;
+  min-height: 100vh;
+  border-radius: 0;  
 }
 
 .flex {
@@ -20,3 +27,21 @@
   flex-direction: column;
   text-align: center;
 }
+
+
+.topContainer {
+  background-color: #d40000;
+  height: 71px;
+  width: 100%;
+  clip-path: polygon(0 0, 100% 0%, 92% 100%, 0 100%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.closeContainer {
+  margin-right: 45px;
+}
+.showSidebar {
+  left: 0;
+} 

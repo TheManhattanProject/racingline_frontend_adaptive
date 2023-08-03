@@ -1,0 +1,46 @@
+.header {
+  background-color: #ffffff;
+  padding: 2rem 2rem 0 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .backArrow {
+    position: relative;
+    height: 25px;
+    width: 40px;
+    cursor: pointer;
+    margin-left: 2rem;
+  }
+  .logo {
+    position: relative;
+    height: 50px;
+    width: 300px;
+  }
+  @media (max-width: 780px) {
+    padding: 1rem 0rem;
+    .backArrow {
+      height: 20px;
+      width: 30px;
+      margin-left: 1rem;
+    }
+    .logo {
+      height: 40px;
+      width: 220px;
+    }
+  }
+}
+.img {
+  object-fit: cover;
+}
+
+
+@media (aspect-ratio > 1.5) { 
+  .header{ 
+      position: relative;
+      z-index: 10000;
+      flex-direction: row-reverse;
+      .backArrow { 
+visibility: hidden;            }
+  }
+} 

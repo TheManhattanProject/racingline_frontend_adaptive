@@ -1,5 +1,6 @@
 import styles from './footer.module.css';
 import ImageTag from '/components/ui/image.jsx';
+import logo from '/public/mstatic/questions/Racingline logo.svg';
 
 export default function Footer() {
   return (
@@ -29,7 +30,7 @@ export default function Footer() {
         </div>
         <div className={styles.racinglineLogo}>
           <ImageTag
-            src="/public/mstatic/questions/Racingline logo-large.svg"
+            src={logo}
             height={69.24}
             width={334.56}
             alt="racinglineLogo"

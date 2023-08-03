@@ -1,0 +1,80 @@
+ 
+ 
+	.header {
+		height: 87px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		z-index: 3;
+		/* max-width: 2000px;
+    margin: 0 auto; */
+	}
+
+	.logo {
+		width: 274px;
+		height: 100%;
+		margin-left: 15px;
+	}
+
+	.navContainer {
+		display: flex;
+		text-decoration: none;
+		align-items: center;
+	}
+
+	.navContainer:hover {
+		cursor: pointer;
+	}
+
+	.navItems {
+		display: flex;
+		align-items: center;
+	}
+
+	.navLogo {
+		width: 20.32px;
+		margin-right: 7px;
+	}
+
+	.navText {
+		margin-right: 77px;
+		font-family: 'Dev Gothic';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 20px;
+		/* identical to box height */
+		color: #070707;
+		text-transform: uppercase;
+	}
+	.navContainer2 {
+		display: flex;
+		text-decoration: none;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		opacity: 0.8;
+		border: 2px solid #d40000;
+		border-radius: 8px;
+		width: 155px;
+		height: 48px;
+		margin: 0 20px 0 -30px;
+	}
+	.navText2 {
+		font-family: 'Dev Gothic';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 20px;
+		/* identical to box height */
+		text-align: center;
+		color: #d40000;
+	}
+
+	@media only screen and (max-width: 1140px) {
+		.navText {
+			margin-right: 50px;
+		}
+	 
+}

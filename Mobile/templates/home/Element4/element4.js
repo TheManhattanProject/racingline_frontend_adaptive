@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styles from './element4.module.css';
 import img6 from '/public/mstatic/home/element4/checkbox.png';
 import img1 from '/public/mstatic/home/element4/checkbox2.png';
+import img7 from '/public/mstatic/home/element4/Rimg.png';
 import {
   default as img2,
   default as img3,
@@ -129,7 +130,7 @@ const Element4 = () => {
         <span></span>We simply ask you to be<span></span>
       </div>
       <div className={styles.rImagecont}>
-        {/* <Image className={styles.RImage} src={img7} alt="" /> */}
+        <Image className={styles.RImage} src={img7} alt="" />
       </div>
       <div className={styles.element4text6top}>
         <div className={styles.element4Text6}>

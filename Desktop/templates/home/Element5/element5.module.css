@@ -1,0 +1,235 @@
+ 
+	.element5 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.element5row1 {
+		width: 90%;
+		margin: 79px 0 24px 0;
+
+		font-family: 'Ostwald';
+		font-style: normal;
+		font-size: 24px;
+		line-height: 36px;
+		text-align: center;
+		letter-spacing: 0.04em;
+
+		color: #f13e3e;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.element5row2 {
+		width: 100%;
+		background: #282828;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.element5row2 > div:last-child {
+		display: flex;
+		flex-direction: row;
+		gap: 114px;
+	}
+
+	.text4 {
+		font-family: 'Dev Gothic';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 26px;
+		/* identical to box height */
+
+		display: flex;
+		align-items: center;
+		letter-spacing: 0.04em;
+
+		color: #ffffff;
+		gap: 12.87px;
+	}
+
+	.text1 {
+		font-family: 'Dev Gothic';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 26px;
+		line-height: 26px;
+		/* identical to box height */
+
+		display: flex;
+		align-items: center;
+		text-align: center;
+		letter-spacing: 0.04em;
+
+		margin: 45px 0 21px 0;
+		color: #ffffff;
+	}
+
+	.text2 {
+		width: 817px;
+		font-family: 'Ostwald';
+		font-style: normal;
+		font-size: 18px;
+		line-height: 27px;
+		text-align: center;
+		letter-spacing: 0.04em;
+		color: #ffffff;
+		margin-bottom: 91px;
+	}
+
+	.text3 {
+		font-family: 'Ostwald';
+		font-style: normal;
+		font-size: 26px;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		letter-spacing: 0.04em;
+		justify-content: center;
+		line-height: 38.53px;
+		color: #ffffff;
+		margin: 0 50px;
+		min-width: 258px;
+	}
+
+	.text4 > span {
+		width: 46px;
+		height: 46px;
+		border-radius: 50%;
+		background: #ffffff;
+		font-family: 'Ostwald';
+		font-style: normal;
+		font-size: 26px;
+		line-height: 39px;
+		text-align: center;
+		letter-spacing: 0.04em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		color: #282828;
+		/* margin-right: 16px; */
+	}
+
+	.hr {
+		border-top: 3px solid #ffffff;
+	}
+
+	.ball {
+		width: 227px;
+		height: 175px;
+	}
+
+	.element5row3 {
+		display: flex;
+		margin: 64px 0 140px;
+		gap: 37px;
+	}
+
+	.element5row3
+		> span
+		> div:first-child {
+		font-family: 'Ostwald';
+		font-style: normal;
+		font-size: 18px;
+		line-height: 27px;
+		letter-spacing: 0.04em;
+
+		color: #000000;
+	}
+
+	.element5row3 > span > div:last-child {
+		font-family: 'Ostwald';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 36px;
+		line-height: 53px;
+		text-align: center;
+		letter-spacing: 0.04em;
+		text-decoration-line: underline;
+		cursor: pointer;
+
+		color: #d40000;
+	}
+
+	.element5row3 > span {
+		display: flex;
+		flex-direction: column;
+		/* justify-content: space-around; */
+	}
+
+	.line {
+		/* height: 26px; */
+		display: block;
+		border-top: 2px solid #ffffff;
+		width: 100%;
+		/* margin-bottom: 48px; */
+		margin-top: 12px;
+	}
+	.centralbar {
+		margin: 35px 0 75px 0;
+	}
+	.element5row4 {
+		display: flex;
+		align-items: center;
+		width: 100%;
+	}
+	.element5row3top {
+		margin-top: 19px;
+	}
+	.element5row3bottom {
+		display: flex;
+		margin-top: 32px;
+	}
+	@media screen and (min-width: 1280px) {
+		.element5row1 {
+			width: 90%;
+			margin: 79px 0 28px 0;
+			font-size: 24px;
+			line-height: 36px;
+		}
+		.element5row3
+			> span
+			> div:first-child {
+			font-family: 'Ostwald';
+			font-style: normal;
+			font-size: 18px;
+			line-height: 26px;
+			letter-spacing: 0.04em;
+			color: #000000;
+		}
+
+		.element5row3
+			> span
+			> div:last-child {
+			font-family: 'Ostwald';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 36px;
+			line-height: 53px;
+			text-align: center;
+			letter-spacing: 0.04em;
+			text-decoration-line: underline;
+			cursor: pointer;
+
+			color: #d40000;
+		}
+		.ball {
+			width: 227px;
+			height: auto;
+		}
+		.text1 {
+			font-size: 26px;
+			line-height: 26px;
+		}
+		.text2 {
+			line-height: 27px;
+		}
+	}
+ 
+ 

@@ -1,0 +1,369 @@
+.element2 {
+  margin-top: 30px;
+  /* height: 1053px; */
+  display: flex;
+  justify-content: center;
+}
+
+.element2container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  z-index: 0;
+}
+
+.f1backmdesk {
+  position: absolute;
+  height: 270px;
+  width: 276.53px;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.f1ls {
+  height: 270px;
+  right: 0;
+  top: 3.7vw;
+  width: auto;
+  position: absolute;
+  z-index: -1;
+}
+.trackls {
+  height: 239px;
+  left: 3.5vw;
+  top: 23.5vw;
+  width: auto;
+  position: absolute;
+  z-index: -1;
+}
+.clockls {
+  height: 191px;
+  right: 14.72vw;
+  top: 1.56vw;
+  width: auto;
+  position: absolute;
+  z-index: -1;
+}
+.cardInfo,
+.cardInfo2,
+.cardInfo3 {
+  z-index: 0;
+}
+.element2container > div:nth-child(2) {
+  transform: translateY(-180px);
+}
+
+.element2container > div:nth-child(3) {
+  transform: translateY(-180px);
+}
+
+.element2container > div:nth-child(2) .cardInfo2 {
+  /* margin-top: 214px; */
+}
+
+@media screen and (max-width: 1200px) {
+  .element2container > div:nth-child(2) {
+    transform: translateY(-167px);
+  }
+
+  .element2container > div:nth-child(3) {
+    transform: translateY(-167px);
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .element2container > div:nth-child(2) {
+    transform: translateY(-180px);
+  }
+
+  .element2container > div:nth-child(3) {
+    transform: translateY(-180px);
+  }
+}
+
+.element2row {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  /* justify-content:center; */
+  max-width: 1800px;
+}
+
+.element2title {
+  width: 672px;
+  font-family: Montserrat;
+  font-size: 65px;
+  font-weight: 600;
+  line-height: 79px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.element2TitleSVG {
+  position: absolute;
+  left: calc(50% - 235px);
+  top: 5px;
+}
+
+.element2content {
+  width: 697px;
+  color: #696969;
+
+  font-family: Montserrat;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 33px;
+  letter-spacing: 0em;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element2SVG {
+  width: 1300px;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 1100px) {
+  .carImg {
+    width: 482px;
+    height: 690px;
+    height: auto;
+  }
+}
+
+.cardTitle1,
+.cardTitle2,
+.cardTitle3 {
+  font-family: "Dev Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  color: #d40000;
+}
+.cardTitle1 {
+  max-width: 484px;
+}
+.cardTitle2 {
+  max-width: 406px;
+}
+.cardTitle3 {
+  max-width: 300.6px;
+}
+
+.cardDescription {
+  max-width: 484px;
+
+  font-family: "Ostwald";
+  font-style: normal;
+  font-size: 24px;
+  line-height: 37px;
+  letter-spacing: 0.04em;
+
+  color: #0a0a0a;
+}
+
+.cardInfo {
+  gap: 42px;
+  display: flex;
+  flex-direction: column;
+  margin: 140px auto auto 6.18vw;
+}
+
+.cardInfo2 {
+  gap: 42px;
+  display: flex;
+  flex-direction: column;
+  margin: 245px 1.9vw auto auto;
+}
+
+.cardInfo3 {
+  gap: 42px;
+  display: flex;
+  flex-direction: column;
+  margin: 160px auto auto 6.18vw;
+}
+
+.band {
+  width: 924px;
+  height: 130px;
+  position: absolute;
+  bottom: 63px;
+  background: url(../../../public/dstatic/home/element2/bandDesktop.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "Ostwald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+  color: #f9f9f9;
+  padding: 0 200px 0 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  /* padding-top: ; */
+}
+
+@media screen and (max-width: 1050px) {
+  .band {
+    width: 880px;
+    /* left: 5%; */
+  }
+}
+
+.element2row2 {
+  background: url(../../../public/dstatic/home/element2/Rectanglef1mw.png);
+  width: 100%;
+  height: calc((317 / 1280) * 100vw);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  gap: 56px;
+  /* margin-bottom: -44px; */
+  /* padding: 56px  0; */
+}
+@media screen and (max-width: 1100px) {
+  .element2row2 {
+    background: url(../../../public/dstatic/home/element2/f1back1100.png);
+    width: 100%;
+    height: calc((317 / 1100) * 100vw);
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    gap: 56px;
+    /* margin-bottom: -44px; */
+    /* padding: 56px  0; */
+  }
+}
+.text {
+  /* width: 65vw; */
+  margin: 0 auto;
+  font-family: "Ostwald";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #f9f9f9;
+  text-shadow: 2.94337px 2.94337px 17.6602px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  width: 250px;
+  height: 72px;
+
+  background: #f9f9f9;
+  border-radius: 12px;
+
+  font-family: "Dev Gothic";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+
+  color: #0a0a0a;
+}
+
+.element2row3 {
+  font-family: "Ostwald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 47px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #282828;
+  margin-bottom: 26.8px;
+  margin-top: -107px;
+}
+
+@media screen and (min-width: 1280px) {
+  .cardInfo {
+    margin: 11vw auto auto 8.515vw;
+  }
+  .cardInfo2 {
+    margin: 21.72vw 3.2vw auto auto;
+  }
+  .cardInfo3 {
+    margin: 12.34vw auto auto 8.75vw;
+  }
+  .f1ls {
+    height: 21vw;
+    width: auto;
+    top: 3.75vw;
+    right: 0;
+  }
+  .trackls {
+    height: auto;
+    left: 3.593vw;
+    top: 22.89vw;
+    width: 12.4vw;
+  }
+  .clockls {
+    height: auto;
+    right: 7.81vw;
+    top: 1.5625vw;
+    width: 17.578125vw;
+  }
+  .element2row3 {
+    margin-top: -61px;
+  }
+  .element2container > div:nth-child(2) {
+    transform: translateY(-14.2vw);
+  }
+
+  .element2container > div:nth-child(3) {
+    transform: translateY(-14.2vw);
+  }
+
+  .band {
+    bottom: 51px;
+  }
+}
+
+.carImg {
+  display: block;
+  width: 482px;
+  height: 490px;
+  height: 690px;
+}
+.carImg2 {
+  display: none;
+  width: 50%;
+  height: calc((690 / 647) * 50vw);
+  height: auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .carImg {
+    display: none;
+  }
+  .carImg2 {
+    display: block;
+  }
+}

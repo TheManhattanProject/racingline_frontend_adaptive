@@ -80,7 +80,7 @@
 .communityInfo {
   width: 100%;
   height: calc((363 / 428) * 100vw);
-  background: url(/public/mstatic/home/element2/backgroundcar.png);
+  background: url(../../../public/mstatic/home/element2/backgroundcar.png);
   background-size: contain;
   display: flex;
   flex-direction: column;
@@ -243,6 +243,7 @@
   display: flex;
   letter-spacing: 0.04em;
   width: 90vw;
+  padding-left: 30px;
   /* margin: auto; */
   /* RL/Secondary Black - F */
 
@@ -369,7 +370,7 @@
   }
 
   .communityInfo {
-    background: url(/public/mstatic/home/element2/community850bg.png);
+    background: url(../../../public/mstatic/home/element2/community850bg.png);
     width: 100vw;
     height: min-content;
     background-size: contain;

@@ -8,20 +8,20 @@ import useAuthUser from '/hooks/useAuthUser';
 import cup from '/public/mstatic/profile/cup.png';
 import hamburger from '/public/mstatic/profile/hamicon.png';
 import logo from '/public/mstatic/questions/Racingline logo.svg';
+import Sidebar from '../sidebar/Sidebar';
 
 var options = ['Questions', 'Ask', 'Hot questions', 'Interesting', 'Search'];
 var reputation = 0;
 
-export default function Header(props) {
-  const [isLoggedIn, { first_name, last_name, profile_img }] = useAuthUser();
-  const [menu, setMenu] = useState(false);
-  const handleSidebarClose = () => setMenu(!menu);
+export default function Header() {
+  const [openSidebar, setopenSidebar] = useState(false);
+  const handleSidebarClose = () => setopenSidebar(prv => !prv);
 
   return (
     <header className={styles.header}>
       <nav className={`${styles.nav} ${styles.container}`}>
         <div className={styles.leftContainer}>
-          <div className={styles.hamburger} onClick={() => setMenu(!menu)}>
+          <div className={styles.hamburger} onClick={() => setopenSidebar(!openSidebar)}>
             <Imagetag src={hamburger} className={styles.hamIcon} />
           </div>
           <div className={styles.racingLogoContainer}>
@@ -33,7 +33,8 @@ export default function Header(props) {
             />
           </div>
         </div>
-        <div className={menu === true ? styles.cupNone : styles.cupContainer}>
+        {/* <div className={menu === true ? styles.cupNone : styles.cupContainer}> */}
+        <div className={styles.cupContainer}>
           <Imagetag
             src={cup}
             className={styles.cupLogo}
@@ -41,38 +42,8 @@ export default function Header(props) {
             height={40}
           />
         </div>
-        <div
-          className={
-            menu === true
-              ? `${styles.sidebar} ${styles.showSidebar}`
-              : styles.sidebar
-          }
-        >
-          {!isLoggedIn && (
-            <SidebarWithoutLoggedIn menu={menu} onClose={handleSidebarClose} />
-          )}
-
-          <div>
-            {isLoggedIn && profile_img !== '' ? (
-              <SidebarLoggedInWithImage
-                ProfileImage={profile_img}
-                FirstName={first_name}
-                reputation={reputation}
-              />
-            ) : (
-              <SidebarLoggedInWithoutImage
-                FirstName={first_name}
-                reputation={reputation}
-                menu={menu}
-                onClose={handleSidebarClose}
-              />
-            )}
-          </div>
-          <div className={styles.listitems}>
-            <SidebarOptions isLoggedIn={isLoggedIn} />
-          </div>
-        </div>
       </nav>
+      <Sidebar openSidebar={openSidebar} handleSidebarClose={handleSidebarClose} />
     </header>
   );
 }

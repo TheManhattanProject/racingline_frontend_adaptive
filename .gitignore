@@ -1,8 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/Desktop/desktop/node_modules
-/Mobile/mobile/node_modules
+/Desktop/node_modules
+/Desktop/.next
+/Mobile/node_modules
+/Mobile/.next
 /.pnp
 .pnp.js
 

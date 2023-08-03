@@ -78,7 +78,7 @@
   background-color: #ffd0d0;
   padding-left: 45px;
   align-items: center;
-
+width: 100vw;
   height: 55px;
   margin-bottom: 20px;
   /* border-radius: 10px; */
@@ -114,7 +114,6 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin-left: 55px;
 }
 
 .link {
@@ -123,66 +122,3 @@
 .marginT {
   margin-top: 150px;
 }
-
-/* .askLogo {
-  width: 19px;
-  height: 20px;
-}
-
-.fireLogo {
-  width: 21.5px;
-  height: 21.23px;
-}
-
-.searchLogo {
-  width: 17.4px;
-  height: 18.17px;
-}
-
-.pollLogo {
-  width: 22px;
-  height: 18.6px;
-} */
-
-/* @media only screen and (max-width:1400px) {
-  .sidebarlistitemselected {
-
-    margin-top: 1.6rem;
-
-  }
-
-  .sidebarlistitemtitle {
-    font-size: 16px;
-    margin-left: 1rem;
-  }
-
-  .flexrowbetween {
-    padding: 0 24px;
-    margin-bottom: 2rem;
-  }
-  .askLogo {
-  width: 13.64px;
-  height: 14.38px;
-}
-
-.fireLogo {
-  width: 15.04px;
-  height: 18.22px;
-}
-
-.searchLogo {
-
-  width: 14.48px;
-  height: 15.03px;
-}
-
-.pollLogo {
-  width: 15.77px;
-  height: 13.34px;
-}
-.QuestionsImage {
-  width: 16.35px;
-  height: 15.74px;
-}
-
-} */

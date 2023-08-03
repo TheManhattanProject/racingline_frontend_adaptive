@@ -1,81 +1,35 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { useCookies } from 'react-cookie';
+
 import styles from './Sidebar.module.css';
-import SidebarLoggedInWithImage from '/components/question_list/DesktopVersion/Sidebar/SidebarImageNameHandler/sidebarLoggedInWithImage';
-import SidebarLoggedInWithoutImage from '/components/question_list/DesktopVersion/Sidebar/SidebarImageNameHandler/sidebarLoggedInWithoutImage';
-import SidebarWithoutLoggedIn from '/components/question_list/DesktopVersion/Sidebar/SidebarImageNameHandler/sidebarWithoutLoggedIn.js';
-import SidebarOptions from '/components/question_list/DesktopVersion/Sidebar/SidebarOptions/SidebarOptions.js';
+import Sidebar_for_LoggedIn from '../../layouts/sidebar/SidebarImageNameHandler/sidebarLoggedInWithoutImage';
+import Sidebar_for_NotLoggedIn from '../../layouts/sidebar/SidebarImageNameHandler/sidebarWithoutLoggedIn';
+import SidebarOptions from '../../layouts/sidebar/SidebarOptions/SidebarOptions';
+import close from '/public/mstatic/profile/close.png';
+import useAuthUser from '@/hooks/useAuthUser';
+import Imagetag from '@/components/ui/image';
 
-const Sidebar = (props) => {
-  const router = useRouter();
-  const [profileImage, setProfileImage] = useState('Not logged in');
-  const [firstName, setFirstName] = useState('');
-  const [isLoggedIn, setisLoggedIn] = useState(false);
-
-  const options = [
-    'Questions',
-    'Ask',
-    'Hot questions',
-    'Interesting',
-    'Search',
-  ];
-
-  const [cookies, setCookie, removeCookie] = useCookies([
-    'firstName',
-    'lastName',
-    'profileImage',
-    'accessToken',
-    'refreshToken',
-    'accessTokenExpiresAt',
-    'refreshTokenExpiresAt',
-  ]);
-
-  useEffect(() => {
-    var currentdate = new Date();
-    const refreshTokenExpiryTime = new Date(cookies.refreshTokenExpiresAt);
-    if (
-      cookies.profileImage == undefined ||
-      cookies.refreshToken === undefined ||
-      cookies.refreshToken === 'undefined' ||
-      refreshTokenExpiryTime <= currentdate
-    ) {
-      setisLoggedIn(false);
-    } else {
-      setisLoggedIn(true);
-    }
-
-    if (cookies.profileImage === '' || cookies.profileImage == 'undefined') {
-      setProfileImage('');
-    } else {
-      setProfileImage(cookies.profileImage);
-    }
-    setFirstName(cookies.firstName);
-  }, []);
-
+const Sidebar = ({ openSidebar, handleSidebarClose }) => {
+  console.log(openSidebar);
+  const [isLoggedIn, { first_name, last_name, profile_img }] = useAuthUser();
   return (
-    <div className={styles.sidebar}>
-      {isLoggedIn === false && <SidebarWithoutLoggedIn />}
-      <Link href={`/profile`} style={{ textDecoration: 'none' }}>
-        <div>
-          {isLoggedIn && profileImage === '' && (
-            <SidebarLoggedInWithoutImage
-              FirstName={firstName}
-              reputation={props.reputation}
-            />
-          )}
-          {isLoggedIn && profileImage !== '' && (
-            <SidebarLoggedInWithImage
-              ProfileImage={profileImage}
-              FirstName={firstName}
-              reputation={props.reputation}
-            />
-          )}
+    <div className={openSidebar === true ? `${styles.sidebar} ${styles.showSidebar}` : styles.sidebar}>
+      <div className={styles.topContainer}>
+        <div className={styles.closeContainer} onClick={handleSidebarClose}>
+          <Imagetag
+            src={close}
+            className={styles.closeImg}
+            width={20}
+            height={20}
+            alt="close"
+          />
         </div>
-      </Link>
+      </div>
+      {
+        isLoggedIn
+          ? <Sidebar_for_LoggedIn FirstName={first_name} reputation={0} />
+          : <Sidebar_for_NotLoggedIn />
+      }
       <div className={styles.listitems}>
-        <SidebarOptions />
+        <SidebarOptions isLoggedIn={isLoggedIn} />
       </div>
     </div>
   );

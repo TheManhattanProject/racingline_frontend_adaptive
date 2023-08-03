@@ -1,0 +1,226 @@
+.loginContainer {
+  height: 100vh;
+  width: 100%;
+  font-family: "Ostwald";
+}
+.legendSection {
+  position: relative;
+  width: 64vw;
+  height: 36vw;
+  .legend {
+    object-fit: cover;
+  }
+  @media (max-width: 1370px) {
+    width: 83.8vw;
+    height: 32.6;
+  }
+  @media (max-width: 1130px) {
+    width: 76.8vw;
+    height: 43vw;
+  }
+  @media (max-width: 830px) {
+    width: 65.9vw;
+    height: 38vw;
+  }
+  @media (max-width: 600px) {
+    width: 100vw;
+    height: 43.3vw;
+    margin: auto;
+  }
+}
+.inputArea {
+  width: 50%;
+  margin: auto;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 900px) {
+    width: 60%;
+  }
+  @media (max-width: 780px) {
+    width: 90%;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  gap: 42px;
+  margin-top: 32px;
+  .inputWrapper {
+    width: 50%;
+  }
+}
+
+.passwordInput {
+  margin-top: 8px;
+}
+
+.inputGroup.lastRow {
+  .inputWrapper {
+    width: 60%;
+  }
+  .inputWrapper.lastRow {
+    width: 40%;
+    align-self: flex-end;
+  }
+  @media (max-width: 780px) {
+    .inputWrapper {
+      width: 100%;
+    }
+    .inputWrapper.lastRow {
+      display: none;
+    }
+  }
+}
+
+.recoveryText {
+  font-family: "Ostwald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 1.5rem;
+  margin-top: 16px;
+  position: relative;
+  letter-spacing: 0.1em;
+  // top: -16px;
+  span {
+    color: #d40000;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  @media (max-width: 780px) {
+    font-size: 0.8rem;
+    // top: -5;
+    margin-top: 10px;
+    margin-left: 0px;
+    font-family: "OstwaldL";
+    letter-spacing: 1px;
+  }
+}
+
+.SubmitBtnMobile {
+  width: 70%;
+  display: none;
+  @media (max-width: 1280px) {
+    height: 53px;
+  }
+  @media (max-width: 780px) {
+    display: block;
+    margin-top: 59px;
+  }
+}
+
+/**********************************************************************/
+//Below CSS is for input fields only
+.bottomBorder {
+  height: 3px;
+  width: 100%;
+  background-color: #0a0a0a;
+
+  @media (max-width: 780px) {
+    height: 2px;
+  }
+}
+
+.bottomBorder.error {
+  background-color: red;
+}
+
+.errorMsg {
+  font-family: "Ostwald";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #d40000;
+}
+
+.inputContainer {
+  font-family: "Ostwald";
+
+  input {
+    height: 60px;
+    width: 100%;
+    border: 0px;
+    margin: auto;
+    font-family: "OstwaldL";
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 2px;
+    padding: 21px 28px;
+    color: #0a0a0a;
+
+    &::placeholder {
+      text-transform: uppercase;
+      color: #0a0a0a;
+      font-family: "Ostwald";
+      // padding: 1rem 0.5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media (max-width: 1280px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  @media (max-width: 780px) {
+    input {
+      font-size: 20px;
+    }
+  }
+}
+
+.inputContainer.error {
+  input {
+    color: red;
+
+    &::placeholder {
+      color: red;
+    }
+  }
+}
+
+@media (aspect-ratio > 1.5) { 
+  .main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1000;
+    position: relative;
+    margin-top: -20px;
+  }
+  .legendSection {
+    width: 80vw;
+    height: 40vw;
+    left: -180px;
+  }
+  .inputArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    margin-left: -220px;
+    z-index:100;
+    margin-top: 150px;
+  }
+  .inputContainer { 
+    width: 480px;
+  }
+  .cta {
+    display: none;
+  }
+  .recoveryText {
+    text-align: left;
+    padding: 0;
+    margin-left: -100px;
+  }
+} 
