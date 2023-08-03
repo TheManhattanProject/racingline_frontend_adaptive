@@ -7,7 +7,6 @@ import img6 from "../../../public/dstatic/home/element2/car2c.png";
 import img7 from "../../../public/dstatic/home/element2/car3short.png";
 import img8 from "../../../public/dstatic/home/element2/car3c.png";
 import img9 from "../../../public/dstatic/home/element2/clockls.png";
-
 const Element2 = () => {
   return (
     <div className={styles.element2}>
@@ -16,7 +15,7 @@ const Element2 = () => {
           <div className={styles.carImg}>
             <Image src="/dstatic/home/element2/car1short.png" fill={true} />
           </div>
-          <div className={styles.carImg2}>
+          <div className={styles.carImgTest}>
             <Image src="/dstatic/home/element2/car1c.png" fill={true} />
           </div>
 
