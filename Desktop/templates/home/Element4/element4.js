@@ -1,27 +1,41 @@
 import Image from "next/image";
 import styles from "./element4.module.css";
-import img1 from "../../../public/dstatic/home/element4/checkbox.png";
-import img2 from "../../../public/dstatic/home/element4/checkbox2.png";
-import img3 from "../../../public/dstatic/home/element4/track.webp";
-import img4 from "../../../public/dstatic/home/element4/checkbox.png";
-import img5 from "../../../public/dstatic/home/element4/checkbox2.png";
+
 const Element4 = () => {
   return (
     <div className={styles.element4}>
       <div className={styles.element4row1}>
-        <Image src={img1} className={styles.checkbox} />
-        <Image src={img2} className={styles.checkbox2} />
-        <div className={styles.element4row1title}>CHECKPOINT</div>
-        <div className={styles.element4row1description}>
-          Racingline has more in-store for you
+        <div className={styles.checkbox}>
+          <Image
+            src="/dstatic/home/element4/checkbox.png"
+            className={styles.setPositionInitalTrue}
+            fill={true}
+          />
         </div>
+        <div className={styles.checkbox2}>
+          <Image
+            src="/dstatic/home/element4/checkbox2.png"
+            className={styles.setPositionInitalTrue}
+            fill={true}
+          />
+        </div>
+        <div className={styles.element4row1title}>CHECKPOINT</div>
+        <h2 className={styles.element4row1description}>
+          Racingline has more in-store for you
+        </h2>
       </div>
-      <div className={styles.element4row4}>
+      <p className={styles.element4row4}>
         What&apos;s in having a little fun? Interactions on Racingline are
         rewarded with Reputation Points and Levels.
-      </div>
+      </p>
       <div className={styles.element4row}>
-        <Image src={img3} className={styles.track} />
+        <div className={styles.track}>
+          <Image
+            src="/dstatic/home/element4/track.webp"
+            className={styles.setPositionInitalTrue}
+            fill={true}
+          />
+        </div>
         <div className={styles.element4rowtext1}>
           <h4>
             Ask Valuable Questions and <br /> Draft Valuable Answers
@@ -71,13 +85,24 @@ const Element4 = () => {
           </p>
         </div>
       </div>
-
       <div className={styles.element4row2}>
-        <div className={styles.element4row2title}>
+        <h4 className={styles.element4row2title}>
           It’s a race to the finish line, after all!
+        </h4>
+        <div className={styles.checkbox}>
+          <Image
+            src="/dstatic/home/element4/checkbox.png"
+            className={styles.setPositionInitalTrue}
+            fill={true}
+          />
         </div>
-        <Image src={img4} className={styles.checkbox} />
-        <Image src={img5} className={styles.checkbox2} />
+        <div className={styles.checkbox2}>
+          <Image
+            src="/dstatic/home/element4/checkbox2.png"
+            className={styles.setPositionInitalTrue}
+            fill={true}
+          />
+        </div>
       </div>
     </div>
   );
