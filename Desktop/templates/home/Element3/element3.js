@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "./element3.module.css";
-import img6 from "../../../public/dstatic/home/element3/steering.png";
 
 const Element3 = () => {
   return (
