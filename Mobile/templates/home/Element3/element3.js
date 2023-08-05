@@ -1,10 +1,10 @@
-import Image from 'next/image';
-import styles from './element3.module.css';
-import img1 from '/public/mstatic/home/element3/ask.png';
-import img4 from '/public/mstatic/home/element3/formulacar.png';
-import img2 from '/public/mstatic/home/element3/help.png';
-import img3 from '/public/mstatic/home/element3/share.png';
-import img5 from '/public/mstatic/home/element3/steering.png';
+import Image from "next/image";
+import styles from "./element3.module.css";
+import img1 from "/public/mstatic/home/element3/ask.png";
+import img4 from "/public/mstatic/home/element3/formulacar.png";
+import img2 from "/public/mstatic/home/element3/help.png";
+import img3 from "/public/mstatic/home/element3/share.png";
+import img5 from "/public/mstatic/home/element3/steering.png";
 
 const Element3 = () => {
   return (
@@ -17,7 +17,13 @@ const Element3 = () => {
           <div className={styles.upperflex}>
             <div>
               <span>
-                <Image src={img1} className={styles.icons} />
+                <div className={styles.icons}>
+                  <Image
+                    src="/mstatic/home/element3/ask.png"
+                    fill={true}
+                    className={styles.setPositionInitialTrue}
+                  />
+                </div>
               </span>
               <span>
                 <div className={styles.upperTitle}>ASK QUESTIONS</div>
@@ -30,7 +36,13 @@ const Element3 = () => {
             </div>
             <div>
               <span>
-                <Image src={img2} className={styles.icons} />
+                <div className={styles.icons}>
+                  <Image
+                    src="/mstatic/home/element3/help.png"
+                    fill={true}
+                    className={styles.setPositionInitialTrue}
+                  />
+                </div>
               </span>
               <span>
                 <div className={styles.upperTitle}>HELP OTHERS</div>
@@ -43,7 +55,13 @@ const Element3 = () => {
             </div>
             <div>
               <span>
-                <Image src={img3} className={styles.icons} />
+                <div className={styles.icons}>
+                  <Image
+                    src="/mstatic/home/element3/share.png"
+                    fill={true}
+                    className={styles.setPositionInitialTrue}
+                  />
+                </div>
               </span>
               <span>
                 <div className={styles.upperTitle}>SHARE YOUR VIEWS</div>
@@ -55,27 +73,40 @@ const Element3 = () => {
             </div>
           </div>
           <div className={styles.formulacardiv}>
-            <Image src={img4} className={styles.formulacar} />
+            <div className={styles.formulacar}>
+              <Image
+                src="/mstatic/home/element3/formulacar.png"
+                fill={true}
+                className={styles.setPositionInitialTrue}
+              />
+            </div>
           </div>
           <div className={styles.element3row2}>
             <div className={styles.lowerText}>
               With Racingline, interacting with people just like you has become
               easier.
               <span className={styles.lowerTextRed}>
-                {' '}
+                {" "}
                 Finding your own community and group of car lovers is just a few
                 clicks away.
               </span>
             </div>
             <div className={styles.lowerText2}>
-              <span className={styles.lowerTextRed}>Here on the platform,</span>{' '}
+              <span className={styles.lowerTextRed}>Here on the platform,</span>{" "}
               connect with other fans and enthusiasts from around the world,
               make new friends, and share your love of the sport.
             </div>
           </div>
           <div className={styles.element3row3}>
             <div>
-              <Image src={img5} className={styles.steering} />
+              <div className={styles.steering}>
+                <Image
+                  src="/mstatic/home/element3/steering.png"
+                  fill={true}
+                  className={styles.setPositionInitialTrue}
+                />
+              </div>
+
               <span>Go on and take the wheel today!</span>
             </div>
             <button className={styles.button}>GO TO FEED</button>

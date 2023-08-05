@@ -4,7 +4,9 @@
   background: white;
   overflow: clip;
 }
-
+.setPositionInitalTrue{
+  position: initial !important ;
+}
 .flexContainer {
   display: flex;
   width: 100%;

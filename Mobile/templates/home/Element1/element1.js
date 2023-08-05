@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import styles from './element1.module.css';
+import Image from "next/image";
+import styles from "./element1.module.css";
 
-import img1 from '/public/mstatic/home/element1/Rectanglemv.png';
+import img1 from "/public/mstatic/home/element1/Rectanglemv.png";
 const Element1 = () => {
   return (
     <div className={styles.element1}>
@@ -12,7 +12,13 @@ const Element1 = () => {
               Accelerating Your <div>Passion</div>
               <div>For Cars</div>
             </div>
-            <Image className={styles.element1mainSVG} src={img1} alt="" />
+            <div className={styles.element1mainSVG}>
+              <Image
+                src="/mstatic/home/element1/Rectanglemv.png"
+                fill={true}
+                className={styles.setPositionInitalTrue}
+              />
+            </div>
           </div>
         </div>
         <div className={styles.flexContainer}>

@@ -1,21 +1,23 @@
-import Image from 'next/image';
-import styles from './element4.module.css';
-import img6 from '/public/mstatic/home/element4/checkbox.png';
-import img1 from '/public/mstatic/home/element4/checkbox2.png';
-import img7 from '/public/mstatic/home/element4/Rimg.png';
+import Image from "next/image";
+import styles from "./element4.module.css";
+import img6 from "/public/mstatic/home/element4/checkbox.png";
+import img1 from "/public/mstatic/home/element4/checkbox2.png";
+import img7 from "/public/mstatic/home/element4/Rimg.png";
 import {
   default as img2,
   default as img3,
   default as img4,
   default as img5,
-} from '/public/mstatic/home/element4/track.png';
+} from "/public/mstatic/home/element4/track.png";
 
 const Element4 = () => {
   return (
     <div className={styles.element4}>
       <div className={styles.element4row1}>
         <div className={styles.checkboxCont}>
-          <Image src={img1} className={styles.checkbox} />
+          <div className={styles.checkbox}>
+            <Image src="/mstatic/home/element4/checkbox2.png" fill={true} className={styles.setPositionInitialTrue}/>
+          </div>
         </div>
         <div>
           <div className={styles.element4row1title}>CHECKPOINT</div>
@@ -35,7 +37,10 @@ const Element4 = () => {
               <div className={styles.numbers}>01</div>
             </div>
           </div>
-          <Image src={img2} className={styles.track} />
+          <div className={styles.track}>
+            <Image src="/mstatic/home/element4/track.png" fill={true} />
+          </div>
+
           <div>
             <h4 className={styles.h41}>
               Ask Valuable Questions and Draft Valuable Answers
@@ -53,7 +58,10 @@ const Element4 = () => {
               <div className={styles.numbers}>02</div>
             </div>
           </div>
-          <Image src={img3} className={styles.track} />
+          <div className={styles.track}>
+            <Image src="/mstatic/home/element4/track.png" fill={true} />
+          </div>
+
           <div>
             <h4 className={styles.h42}>Get Upvoted for Your Contributions</h4>
             <p className={styles.p42}>
@@ -70,7 +78,10 @@ const Element4 = () => {
           <div className={styles.top}>
             <div className={styles.numbers}>03</div>
           </div>
-          <Image src={img4} className={styles.track} />
+          <div className={styles.track}>
+            <Image src="/mstatic/home/element4/track.png" fill={true} />
+          </div>
+
           <div>
             <h4 className={styles.h43}>WIN REPUTATION POINTS</h4>
             <p className={styles.p43}>
@@ -88,7 +99,9 @@ const Element4 = () => {
           <div className={styles.top}>
             <div className={styles.numbers}>04</div>
           </div>
-          <Image src={img5} className={styles.track} />
+          <div className={styles.track}>
+            <Image src="/mstatic/home/element4/track.png" fill={true} />
+          </div>
           <div>
             <h4 className={styles.h44}>level up with a set of tasks</h4>
             <p className={styles.p44}>
@@ -105,7 +118,15 @@ const Element4 = () => {
         </div>
       </div>
       <div className={styles.lastbox}>
-        <Image className={styles.checkboximage} src={img6} alt="" />
+        <div className={styles.checkboximage}>
+          <Image
+            src="/mstatic/home/element4/checkbox.png"
+            alt=""
+            fill={true}
+            className={styles.setPositionInitialTrue}
+          />
+        </div>
+
         <div className={styles.checkboximagetext}>
           It’s a race to the finish line, after all!
         </div>
@@ -130,7 +151,14 @@ const Element4 = () => {
         <span></span>We simply ask you to be<span></span>
       </div>
       <div className={styles.rImagecont}>
-        <Image className={styles.RImage} src={img7} alt="" />
+        <div className={styles.RImage}>
+          <Image
+            src="/mstatic/home/element4/Rimg.png"
+            alt=""
+            fill={true}
+            className={styles.setPositionInitialTrue}
+          />
+        </div>
       </div>
       <div className={styles.element4text6top}>
         <div className={styles.element4Text6}>

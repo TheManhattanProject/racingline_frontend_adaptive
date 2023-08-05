@@ -9,7 +9,9 @@
   flex-direction: column;
   position: relative;
 }
-
+.setPositionInitialTrue{
+  position: initial !important;
+}
 .element2row {
   display: flex;
   flex-direction: column;
