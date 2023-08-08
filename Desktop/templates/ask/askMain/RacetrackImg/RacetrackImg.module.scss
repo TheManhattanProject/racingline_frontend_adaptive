@@ -1,0 +1,21 @@
+.img {
+  margin: 4rem 0 0 0;
+  .desktop {
+    width: 100%;
+    display: block;
+  }
+  .mobile {
+    width: 100%;
+    display: none;
+  }
+  @media (max-width: 600px) {
+	margin-top: 2rem;
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+      margin-bottom: 22px;
+    }
+  }
+}
