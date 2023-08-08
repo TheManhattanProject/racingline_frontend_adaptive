@@ -178,11 +178,11 @@ function Register() {
       <Header />
       <main className={styles.main}>
         <section className={styles.legendSection}>
-          <Image
-            src={racecarImg}
+        <Image className={styles.legend}
+            src="/dstatic/auth/racecar.png"
+            priority
             alt={"race car"}
-            className={styles.legend}
-            fill
+            fill 
           />
         </section>
         {/* for <1.6 */}

@@ -1,0 +1,104 @@
+.cardWrapper {
+  position: relative;
+  height: 230px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 150px;
+  .left {
+    width: 400px;
+    .carName {
+      font-family: "Dev Gothic";
+      color: #fdd9d9;
+      font-size: 56px;
+      padding-left: 14px;
+      line-height: 1;
+      margin: 0;
+      margin-top: 34px;
+      position: relative;
+      z-index: 10;
+    }
+    .carImg {
+      position: relative;
+      top: -5px;
+      z-index: 10;
+      width: 400px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .carDetails {
+    //width: 240px;
+    margin-left: 25px;
+    position: relative;
+    z-index: 10;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .detail {
+      .title {
+        font-size: 16px;
+        font-size: "OstwaldL";
+        text-transform: capitalize;
+        margin-right: 30px;
+      }
+      font-family: "Dev Gothic";
+      font-size: 22px;
+      color: #181818;
+    }
+  }
+  @media (max-width: 1200px) {
+    height: 180px;
+    margin-left: 100px;
+    .left {
+      width: 320px;
+      .carName {
+        font-size: 44px;
+        padding-left: 11px;
+        margin-top: 25px;
+      }
+      .carImg {
+        width: 320px;
+      }
+    }
+    .carDetails {
+      margin-left: 18px;
+      gap: 12px;
+      .detail {
+        margin: 0;
+        .title {
+          font-size: 12px;
+          margin-right: 25px;
+        }
+        font-size: 16px;
+      }
+    }
+  }
+}
+.year {
+  position: absolute;
+  font-size: 180px;
+  color: #fdd9d9;
+  font-family: "Dev Gothic";
+  top: 0;
+  right: 25px;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0.8;
+  margin-top: 22px;
+  @media (max-width: 1200px) {
+    font-size: 140px;
+    margin-top: 16px;
+    right: 12px;
+  }
+}
+
+.background {
+  position: absolute;
+  left: 90px;
+  @media (max-width: 1200px) {
+    left: 60px;
+  }
+}

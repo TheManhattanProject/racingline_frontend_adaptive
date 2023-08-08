@@ -8,15 +8,15 @@ export default function useAuthUser() {
     first_name: '',
     last_name: '',
     profile_img: '',
+    reputation: 0
   });
   useEffect(() => {
-    console.log(cookies);
     const currentdate = new Date();
     const refreshTokenExpiryTime = new Date(cookies.refreshTokenExpiresAt);
     if (
       cookies.refreshToken === undefined ||
-      cookies.refreshToken === 'undefined'
-      // || refreshTokenExpiryTime <= currentdate
+      cookies.refreshToken === 'undefined' ||
+      refreshTokenExpiryTime <= currentdate
     ) {
       setisLoggedIn(false);
     } else {
@@ -25,6 +25,7 @@ export default function useAuthUser() {
         first_name: cookies.firstName,
         last_name: cookies.lastName,
         profile_img: cookies.profileImage,
+        reputation: cookies.reputation ?? 0
       });
     }
   }, [cookies]);

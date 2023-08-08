@@ -213,3 +213,6 @@ a {
 }
 
   */
+.thesidebar img {
+  position: relative !important;
+}

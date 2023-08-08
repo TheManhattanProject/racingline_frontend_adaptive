@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+.mainContainer{
+    margin-top: 20px;
+    height: 470px;
+    width: 260px;
+    background-color: #f0f0f0;
+    @media (max-width: 1500px) {
+        height: 337px;
+        width: 187px;
+    }
+}
+.listWrapper{
+    padding: 44px 0 0 37px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .selectedBackground{
+        position: absolute;
+        background: #FFD0D0;
+        margin-left: 16px;
+        height: 54px;
+        width: 276px;
+        border-radius: 0px;
+        transform: skew(-30deg);
+        transform-origin: top;
+        padding-left: 1px;
+    }
+    .selectedBackground.hotQuestions{
+        background: #D40000;
+    }
+    @media (max-width: 1500px){
+        padding: 24px 0 0 24px;
+        .selectedBackground{
+            width: 197px;
+            height: 38px;
+        }
+    } 
+}
+
+.option{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    height: 54px;
+    position: relative;
+    .optionTitle{
+        color: #706666;
+        font-size: 20px;
+        font-family: "Ostwald";
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin: 0;
+        cursor: pointer;
+        text-align: left;
+    }
+    .optionTitle.selectedTitle{
+        color: #D40000;
+    }
+    .optionTitle.selectedTitleHot{
+        color: #ffffff;
+    }
+    figure{
+        margin: 0;
+        height: 21px;
+        width: 21px;
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        //background-color: #706666;
+        .icon{
+            width: 100%;
+        }
+    }
+    @media (max-width: 1500px){
+        height: 38px;
+        gap: 12px;
+        .optionTitle{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        figure{
+            height: 18px;
+            width: 18px;
+        }
+    }
+}
+
+.option.selectedOption{
+    position: relative;
+    left: 52px;
+    @media (max-width: 1500px) {
+        left: 37px;
+    }
+}
+

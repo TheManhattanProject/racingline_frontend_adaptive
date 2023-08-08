@@ -1,83 +1,59 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { useCookies } from 'react-cookie';
-import styles from './Sidebar.module.css';
-import SidebarLoggedInWithImage from '/components/question_list/DesktopVersion/Sidebar/SidebarImageNameHandler/sidebarLoggedInWithImage';
-import SidebarLoggedInWithoutImage from '/components/question_list/DesktopVersion/Sidebar/SidebarImageNameHandler/sidebarLoggedInWithoutImage';
-import SidebarWithoutLoggedIn from '/components/question_list/DesktopVersion/Sidebar/SidebarImageNameHandler/sidebarWithoutLoggedIn.js';
-import SidebarOptions from '/components/question_list/DesktopVersion/Sidebar/SidebarOptions/SidebarOptions.js';
+import styles from "./Sidebar.module.scss";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import Image from "next/image";
+import OptionsList from "./OptionList/OptionsList";
+import useAuthUser from "@/hooks/useAuthUser";
 
-const Sidebar = (props) => {
-  const router = useRouter();
-  const [profileImage, setProfileImage] = useState('Not logged in');
-  const [firstName, setFirstName] = useState('');
-  const [isLoggedIn, setisLoggedIn] = useState(false);
-
-  const options = [
-    'Questions',
-    'Ask',
-    'Hot questions',
-    'Interesting',
-    'Search',
-  ];
-
-  const [cookies, setCookie, removeCookie] = useCookies([
-    'firstName',
-    'lastName',
-    'profileImage',
-    'accessToken',
-    'refreshToken',
-    'accessTokenExpiresAt',
-    'refreshTokenExpiresAt',
-  ]);
-
-  useEffect(() => {
-    var currentdate = new Date();
-    const refreshTokenExpiryTime = new Date(cookies.refreshTokenExpiresAt);
-    if (
-      cookies.profileImage == undefined ||
-      cookies.refreshToken === undefined ||
-      cookies.refreshToken === 'undefined' ||
-      refreshTokenExpiryTime <= currentdate
-    ) {
-      setisLoggedIn(false);
-    } else {
-      setisLoggedIn(true);
-    }
-
-    if (cookies.profileImage === '' || cookies.profileImage == 'undefined') {
-      setProfileImage('');
-    } else {
-      setProfileImage(cookies.profileImage);
-    }
-    setFirstName(cookies.firstName);
-  }, [cookies]);
+const Sidebar = () => { 
+  const [isLoggedIn, { first_name, last_name, profile_img, reputation }] = useAuthUser();
+  const pathname = usePathname()
 
   return (
-    <div className={styles.sidebar}>
-      {isLoggedIn === false && <SidebarWithoutLoggedIn />}
-      <Link href={`/profile`} style={{ textDecoration: 'none' }}>
-        <div>
-          {isLoggedIn && profileImage === '' && (
-            <SidebarLoggedInWithoutImage
-              FirstName={firstName}
-              reputation={props.reputation}
-            />
-          )}
-          {isLoggedIn && profileImage !== '' && (
-            <SidebarLoggedInWithImage
-              ProfileImage={profileImage}
-              FirstName={firstName}
-              reputation={props.reputation}
-            />
+    <div className={`thesidebar ${styles.sidebar}`}>
+      <Image
+        className={styles.sidebarquoteNotLoggedIn}
+        src="/dstatic/hotquestions/logo.png"
+        fill
+        priority
+        alt="racingline-logo"
+      />
+      <hr className={styles.hr} />
+      <div className={styles.detailsWrapper}>
+        {isLoggedIn ? (
+          <p className={styles.name}>Hi, {first_name}</p>
+        ) : (
+          <p className={styles.name}>Hi, Racer</p>
+        )}
+
+        <div className={styles.subWrapper}>
+          {isLoggedIn ? (
+            <>
+              <p>Your current reputation is at <b>{reputation}</b></p>
+              <p>points.</p>
+            </>
+          ) : (
+            <>
+              <p className={styles.infoText}>
+                Looking to contribute?
+                <br />
+              </p>
+              <Link href="/login" style={{ textDecoration: "none" }}>
+                <h2 className={styles.pointsText}>
+                  Log In / Sign Up
+                  <br />
+                </h2>
+              </Link>
+            </>
           )}
         </div>
-      </Link>
+      </div>
+      <hr className={styles.hr} />
       <div className={styles.listitems}>
-        <SidebarOptions />
+          <OptionsList page={pathname}/>
       </div>
     </div>
   );
 };
-export default Sidebar;
+
+export default Sidebar; 
