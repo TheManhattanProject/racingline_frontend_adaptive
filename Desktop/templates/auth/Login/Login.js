@@ -127,11 +127,15 @@ function Login() {
       <Header />
       <main className={styles.main}>
         <section className={styles.legendSection}>
-          <Image
-            src={racecarImg}
+          {/* <div className={styles.legend}>
+          
+          </div> */}
+          <Image className={styles.legend}
+            src="/dstatic/auth/racecar.png"
+            priority
+            // src= {racecarImg}
             alt={"race car"}
-            className={styles.legend}
-            fill
+            fill 
           />
         </section>
         <section className={styles.inputArea}>
