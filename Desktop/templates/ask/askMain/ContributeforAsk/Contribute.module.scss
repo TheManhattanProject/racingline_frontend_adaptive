@@ -1,0 +1,30 @@
+.container {
+  h2 {
+    color: #d40000;
+    font-family: "OstwaldEL";
+    font-size: 48px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    font-weight: 600;
+    @media (max-width: 1500px) {
+      font-size: 42px;
+      margin-bottom: 35px;
+      margin-left: 38px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 36px;
+      margin-bottom: 28px;
+      margin-left: 42px;
+    }
+  }
+  .textArea {
+    max-width: 100%;
+    margin-bottom: 2rem;
+    hr {
+      border-top: 2px solid #858585;
+      opacity: 1;
+      margin: 0px;
+    }
+  }
+
+}

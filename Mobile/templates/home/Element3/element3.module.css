@@ -7,7 +7,9 @@
   box-shadow: 0px -4px 50px #f0f1f5;
   display: flex;
 }
-
+.setPositionInitialTrue{
+  position: initial !important;
+}
 .element3row {
   display: flex;
   align-items: center;

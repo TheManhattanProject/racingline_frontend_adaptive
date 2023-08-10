@@ -10,7 +10,9 @@
   margin: 0;
   padding: 0;
 }
-
+.setPositionInitialTrue{
+  position: initial !important;
+}
 .checkboxCont {
   width: 33.4vw;
   background: url('../../../public/mstatic/home/element4/checkbox2.png');

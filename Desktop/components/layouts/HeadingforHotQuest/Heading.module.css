@@ -1,0 +1,36 @@
+.heading{
+    font-size: 72px;
+    line-height: 24px;
+}
+
+.info{
+    width: 90%;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #898989;
+}
+
+.hotimg{
+    width: 100%;
+    height: auto;
+}
+
+.maindiv{
+    display: flex;
+}
+
+.launch{
+    margin-right: 14vw;
+}
+
+.launchimg{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    right: 30px;
+    top: 50px;
+}
