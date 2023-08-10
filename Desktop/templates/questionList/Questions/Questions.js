@@ -1,6 +1,6 @@
-import styles from "./Questions.module.css";
 import { dateToString } from "../../../lib/utils";
 import QuestionCard from "./QuestionCard/QuestionCard";
+import styles from "./Questions.module.css";
 
 const Questions = (props) => {
   return (

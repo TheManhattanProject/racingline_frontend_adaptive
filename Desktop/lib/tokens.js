@@ -1,28 +1,14 @@
-// import { cookies } from "next/dist/client/components/headers"
-import { useCookies } from "react-cookie";
+import { setCookie } from 'cookies-next';
 import { RefreshToken } from "./urls";
 
-async function getAccessToken() {
-    var [cookies, setCookie, removeCookie] = useCookies([
-        "firstName",
-        "lastName",
-        "profileImage",
-        "accessToken",
-        "refreshToken",
-        "accessTokenExpiresAt",
-        "refreshTokenExpiresAt",
-        "redirectRoute",
-        "routeQuery",
-    ]);
+async function getAccessToken(cookies, req = null, res = null) {
     var { accessToken, accessTokenExpiresAt, refreshTokenExpiresAt, refreshToken } = cookies;
     var date = new Date();
     var refTknExp = new Date(refreshTokenExpiresAt);
     var accTknExp = new Date(accessTokenExpiresAt);
-
     if (refreshToken === undefined || refreshToken === "undefined" || refTknExp <= date) {
         return { status: false, token: null };
     };
-
     if (accessToken === undefined || accessToken === "undefined" || accTknExp <= date) {
         try {
             var myHeaders = new Headers();
@@ -35,19 +21,12 @@ async function getAccessToken() {
                 redirect: "follow",
             };
             const response = await fetch(RefreshToken, requestOptions);
-            if (!response.ok) return new Error('Server Crached, Login agiain!')
+            if (!response.ok) return new Error('Server Crashed, Login again!')
             const result = await response.json();
-            setCookie("accessToken", result.access_token, {
-                path: "/",
-                maxAge: 2592000,
-                sameSite: true,
-            });
-            setCookie("accessTokenExpiresAt", result.access_token_expires_at, {
-                path: "/",
-                maxAge: 2592000,
-                sameSite: true,
-            });
             accessToken = result.access_token;
+            accessTokenExpiresAt = result.access_token_expires_at;
+            (req && res) && setCookie('accessToken', accessToken, { req, res, maxAge: 2592000 });
+            (req && res) && setCookie('accessTokenExpiresAt', accessTokenExpiresAt, { req, res, maxAge: 2592000 });
             return { status: true, token: accessToken };
         } catch (error) {
             return { status: false, token: null };
@@ -57,3 +36,4 @@ async function getAccessToken() {
 }
 
 export { getAccessToken };
+
