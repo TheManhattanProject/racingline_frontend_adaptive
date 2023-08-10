@@ -18,3 +18,13 @@ export const getServerSideProps = async ({ query, req, res }) => {
     const { res: data } = response;
     return { props: { data } };
 }
+
+// //* ht ques
+// export const getServerSideProps = async ({ query, req, res }) => {
+//     const { cookies } = req, { page = 1 } = query;
+//     const auth = true;
+//     const url = QuestionltAth;
+//     const response = await get({ url, page, cookies, auth, req, res })
+//     const { res: data } = response;
+//     return { props: { data } };
+// }

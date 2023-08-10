@@ -1,13 +1,19 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { useCookies } from "react-cookie";
-import { RefreshToken, CreateQuestion } from "../../../../lib/urls";
+import Mde from "@/components/ui/mde/index";
+import Spinner from "@/components/ui/spinner/index";
+import post from "@/lib/post";
+import { CreateQuestion } from "@/lib/urls";
 import Image from "next/image";
-import styles from "./AskQuestion.module.scss";
-import TextArea from "../ContributeforAsk/TextArea";
-import edgeImg from "../../../public/images/ask/edge.png";
-import Spinner from "../spinner/index";
 import { useRouter } from "next/router";
-import Mde from "../../@lib/mde/mde";
+import { useCallback, useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
+import styles from "./AskQuestion.module.scss";
+
+function middlewareForValidation({ titleValue, tags, value }) {
+  if (titleValue === '') return false;
+  if (value === '') return false;
+  if (tags && tags.length === 0) return false;
+  return true;
+}
 
 function AskQuestion() {
   const [titleValue, setTitleValue] = useState("");
@@ -15,10 +21,48 @@ function AskQuestion() {
   const [value, setValue] = useState("");
   const [tagsValue, setTagsValue] = useState("");
   const [spin, setSpin] = useState(false);
-
   const Router = useRouter();
 
-  const [cookies, setCookie, removeCookie] = useCookies([
+
+  /***
+   * set value son initial render!
+  */
+  useEffect(() => {
+    setTitleValue(cookies.title);
+    if (cookies.tags !== undefined) {
+      setTags(cookies.tags);
+    } else {
+      setTags([]);
+    }
+    setValue(cookies.description);
+  }, []);
+  useEffect(() => {
+    console.log('tags', tags);
+
+  }, [tags]);
+
+  /***
+   * remove tag on given index!
+  */
+  const removeTags = (indexToRemove) => {
+    setTags([...tags.filter((_, index) => index !== indexToRemove)]);
+  };
+
+  /***
+   * add tag on given index!
+  */
+  const addTags = (event) => {
+    var newtagadd = event.target.value.trim();
+    if (newtagadd !== "") {
+      if (tags.indexOf(newtagadd) > -1) {
+      } else {
+        setTags([...tags, newtagadd]);
+      }
+      event.target.value = "";
+      setTagsValue("");
+    }
+  };
+  const [cookies] = useCookies([
     "firstName",
     "lastName",
     "profileImage",
@@ -32,125 +76,23 @@ function AskQuestion() {
     "redirectRoute",
   ]);
 
-  useEffect(() => {
-    setTitleValue(cookies.title);
-    if (cookies.tags !== undefined) {
-      setTags(cookies.tags);
-    } else {
-      setTags([]);
-    }
-    setValue(cookies.description);
-  }, []);
-
-  const removeTags = (indexToRemove) => {
-    setTags([...tags.filter((_, index) => index !== indexToRemove)]);
-  };
-
-  const addTags = (event) => {
-    var newtagadd = event.target.value.trim();
-    if (newtagadd !== "") {
-      if (tags.indexOf(newtagadd) > -1) {
-      } else {
-        setTags([...tags, newtagadd]);
-      }
-      event.target.value = "";
-      setTagsValue("");
-    }
-  };
-
   const submitHandler = useCallback(async () => {
-    // console.log("not signed1");
-
-    // if (spin) return;
-    // console.log("not signed2");
-
-    // if (!titleValue) return Router.push("/login");
-    // console.log("not signed3");
-
-    if (!value) return;
-    console.log("not signed4");
-
-    if (!tags || tags.length == 0) return;
-
-    setSpin(true);
-
-    var accessToken = cookies.accessToken;
-    if (
-      cookies.refreshTokenExpiresAt > new Date() ||
-      cookies.refreshTokenExpiresAt === "undefined" ||
-      cookies.refreshToken === undefined
-    ) {
-      console.log("not signed");
-      return Router.push("/login");
-    }
-    if (
-      new Date(cookies.accessTokenExpiresAt) <= new Date() ||
-      cookies.accessTokenExpiresAt == "undefined" ||
-      cookies.accessTokenExpiresAt == undefined
-    ) {
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      var bodyInfo = JSON.stringify({
-        refresh_token: cookies.refreshToken,
-      });
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: bodyInfo,
-        redirect: "follow",
-      };
-      try {
-        const fetch_response = await fetch(RefreshToken, requestOptions);
-        if (fetch_response.ok) {
-          const response = await fetch_response.text();
-          const result = await JSON.parse(response);
-          setCookie("accessToken", result.access_token, {
-            path: "/",
-            maxAge: 2592000,
-            sameSite: true,
-          });
-          setCookie("accessTokenExpiresAt", result.access_token_expires_at, {
-            path: "/",
-            maxAge: 2592000,
-            sameSite: true,
-          });
-          accessToken = result.access_token;
-        }
-      } catch (err) {
-        console.log(err);
-      }
-    }
-    var myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer ${accessToken}`);
-    myHeaders.append("Content-Type", "application/json");
-    var raw = JSON.stringify({
+    if (!middlewareForValidation({ titleValue, tags, value })) return alert("Not valid info!");
+    const body = {
       title: titleValue,
       description: value,
       tags: tagsValue ? [tagsValue, ...tags] : [...tags],
-    });
-
-    var requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-    try {
-      const response = await fetch(CreateQuestion, requestOptions);
-      console.log(response);
-      if (!response.ok) throw new Error("Server is Down!");
-      const result = await response.json();
-      return Router.push(`/question/${result.id}`);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setTitleValue("");
-      setValue("");
-      setTagsValue("");
-      setTags([]);
-      setSpin(false);
     }
-  }, [cookies, titleValue, value]);
+    const url = CreateQuestion;
+    const { suc, res } = await post({ url, cookies, body });
+    if (!suc) return Router.push("/auth/login");
+    setTitleValue("");
+    setValue("");
+    setTagsValue("");
+    setTags([]);
+    setSpin(false);
+    return res;
+  }, [cookies, titleValue, value, tags]);
 
   return (
     <div className={styles.container}>
@@ -158,7 +100,7 @@ function AskQuestion() {
         <figure className={styles.imgWrapper}>
           <div>
             <Image
-              src="/public/dstatic/headerForAsk/edge.png"
+              src="/dstatic/headerForAsk/edge.png"
               alt={"edge"}
               fill={true}
               className={styles.setInitialPositionTrue}
@@ -186,7 +128,7 @@ function AskQuestion() {
         <figure>
           <div className={styles.img}>
             <Image
-              src="/public/dstatic/headerForAsk/edge.png"
+              src="/dstatic/headerForAsk/edge.png"
               alt={"edgeimg"}
               className={styles.setInitialPositionTrue}
               fill={true}
@@ -236,7 +178,7 @@ function AskQuestion() {
         <figure>
           <div className={styles.img}>
             <Image
-              src="/public/dstatic/headerForAsk/edge.png"
+              src="/dstatic/headerForAsk/edge.png"
               alt={"edge"}
               className={styles.setInitialPositionTrue}
               fill={true}

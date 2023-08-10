@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import styles from "./PopularQuestionsList.module.scss";
-import DashedEdge from "../dashedEdgeForAsk/DashedEgde";
-import PopularQuestion from "./PopularQuestion";
-import nextImg from "../../../public/images/ask/next.png";
-import { useCookies } from "react-cookie";
-import { _getDataWithoutAuth } from "../../../../hooks/req";
-import { HotQuestionsUrl } from "../../../../lib/urls";
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { _getDataWithoutAuth } from '../../../../hooks/req';
+import { HotQuestionsUrl } from '../../../../lib/urls';
+import DashedEdge from '../dashedEdgeForAsk/DashedEgde';
+import PopularQuestion from './PopularQuestion';
+import styles from './PopularQuestionsList.module.scss';
 
 function PopularQuestionsList() {
   const [hotQues, sethotQues] = useState([]);
@@ -22,10 +20,10 @@ function PopularQuestionsList() {
         <span>
           <div className={styles.img}>
             <Image
-              src="/public/dstatic/PopularQuestionsforAsk/next.png"
-              alt={""}
+              src='/public/dstatic/PopularQuestionsforAsk/next.png'
+              alt={''}
               fill={true}
-			  className={styles.setInitialPositionTrue}
+              className={styles.setInitialPositionTrue}
             />
           </div>
         </span>

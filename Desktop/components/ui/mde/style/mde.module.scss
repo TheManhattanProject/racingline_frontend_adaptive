@@ -1,0 +1,136 @@
+$baseColor: #ffffff;
+$CompColor: #9b9a97;
+$FontColor: #37352f;
+$Font: 'Trebuchet MS',
+	'Lucida Sans Unicode', 'Lucida Grande',
+	'Lucida Sans', Arial, sans-serif;
+$height: 400px;
+
+.mde * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: $Font;
+}
+
+.mde {
+	max-width: 800px;
+	min-width: 300px;
+	height: fit-content;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	height: auto;
+	margin-bottom: 60px;
+	text-align: left;
+	position: relative;
+
+	span {
+		position: absolute;
+		bottom: -55px;
+		right: 0px;
+		padding: 10px;
+		text-align: right;
+		background: $baseColor;
+		width: 100%;
+		font-size: 12px;
+	}
+
+	/* tools */
+	img {
+		width: 200px;
+	}
+
+	blockquote {
+		color: #666;
+		margin: 8px 0;
+		padding-left: 8px;
+		border-left: 4px #eee solid;
+	}
+}
+
+.Preview,
+.Editor {
+	min-width: 100%;
+	min-height: $height;
+}
+
+.Editor textarea {
+	width: 100%;
+	height: $height;
+	resize: none;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	font-weight: normal;
+	background: transparent;
+	color: $FontColor;
+	padding: 12px;
+	background: $baseColor;
+	border: 5px solid #eee;
+	color: $FontColor;
+}
+
+.Editor {
+	width: 100%;
+	height: 100%;
+	resize: none;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+.tools {
+	padding: 8px;
+	display: flex;
+	gap: 12px;
+	list-style: none;
+	background: #eee;
+	border-radius: 12px 12px 0 0;
+}
+
+.tools li {
+	cursor: pointer;
+	padding: 4px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	font-size: 22px;
+	display: grid;
+	place-content: center;
+	fill: $FontColor;
+	color: $FontColor;
+}
+
+.tools li:hover {
+	border: 1px solid $FontColor;
+	background: $baseColor;
+}
+
+.Preview {
+	height: calc($height + 20px);
+	overflow-y: scroll;
+	background: $baseColor;
+	padding: 12px 12px 72px;
+	color: $FontColor;
+	word-break: break-all;
+	border-radius: 0 0 12px 12px;
+	position: relative;
+	border: 5px solid #eee;
+
+}
+
+@media screen and (max-width: 420px) {
+	$height: 600px;
+	.Editor {
+		display: flex;
+	}
+	.tools {
+		flex-direction: column;
+		border-radius: 0px;
+	}
+	.Editor textarea {
+		height: 380px;
+	}
+}
