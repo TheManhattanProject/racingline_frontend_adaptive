@@ -1,0 +1,165 @@
+.sidebarcontainer {
+  /* margin-top: 86px; */
+  /* padding-left: 56px;
+    padding-right: 64px; */
+  margin-right: 80px;
+  margin-left: 22px;
+}
+@media screen and (min-width: 1500px) {
+  .sidebarcontainer {
+    margin-top: -40px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .sidebarcontainer {
+    margin-top: -30px;
+    margin-right: 75px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .sidebarcontainer {
+    margin-top: -30px;
+    margin-right: 80px;
+    margin-left: 35px;
+  }
+}
+.flex {
+  margin-top: 20px;
+  display: flex;
+  @media (max-width: 1500px) {
+    margin-top: 35px;
+  }
+  @media (max-width: 1200px) {
+    margin-top: 50px;
+  }
+}
+
+.dash {
+  background-image: url("/static/questions/dash.svg");
+  background-repeat: repeat-x;
+  width: 60px;
+  height: 6px;
+  width: 100%;
+}
+
+/* .card{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    width: auto;
+    height: auto;
+} */
+
+/* .card{
+    width: auto;
+} */
+
+/* .background{
+    background-image: url('./backgroundhotques.png');
+    background-position: right;
+    background-repeat: no-repeat;
+} */
+
+.pagechangecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+  margin-bottom: 98px;
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.card {
+  margin-top: 19px;
+}
+
+.leaderboardcontainer {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 24px;
+  margin-left: 60px;
+  position: relative;
+  top: -15px;
+  @media (max-width: 1500px) {
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .leaderboardcontainer {
+    display: none;
+  }
+}
+
+.noHotQuestions {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 130px;
+  text-align: center;
+
+  color: #898989;
+}
+
+/* 
+.sidebarDesign {
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    height: 100%;
+    width: 50px;
+    background: url("/public/hotquestions/background.svg");
+    background-size: 100px auto;
+    height: 100%;
+    width: 280px;
+} */
+
+.parentdiv {
+  position: relative;
+}
+
+.Background {
+  font-family: "Montserrat", sans-serif;
+  background-size: 260px 100%;
+}
+
+.questionsDiv {
+  width: 100%;
+  @media (max-width: 1200px) {
+    margin-right: 110px;
+  }
+  @media (max-width: 900px) {
+    margin-right: 20px;
+  }
+
+}
+
+@media screen and (max-width: 799px) {
+  .parentdiv {
+    display: none !important;
+  }
+}
+
+.mainWrapper{
+
+}
+.pagechangecontainerMobile{
+  display: none;
+  @media (max-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 64px;
+    margin-bottom: 98px;
+    width: 100%;
+  }
+}

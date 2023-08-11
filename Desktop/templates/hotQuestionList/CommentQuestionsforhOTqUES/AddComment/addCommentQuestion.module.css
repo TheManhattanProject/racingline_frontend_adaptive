@@ -1,0 +1,64 @@
+.newcommentcontainer {
+  margin-top: 18px;
+}
+.setInitialPositionTrue{
+  position: initial;
+}
+.newcomment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background: #f6f6f6;
+  padding-right: 17.11px;
+  width: auto;
+  margin-right: 44px;
+}
+.addCommentInput {
+  background: #f6f6f6;
+  border: 0;
+  width: 1000px;
+  padding: 15px 23px 15px 23px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  color: black;
+}
+
+.addCommentInput::placeholder {
+  color: #898989;
+}
+.addCommentButton {
+  cursor: pointer;
+}
+
+/* 
+@media (max-width: 1341px) and (min-width: 1000px){
+  .newcomment{
+    width: 900px
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1000px){
+  .newcomment{
+    width: 800px
+  }
+}
+
+@media (max-width: 1144px) and (min-width: 1000px){
+  .newcomment{
+    width: 700px
+  }
+}
+
+@media (max-width: 1039px) and (min-width: 1000px){
+  .newcomment{
+    width: 668px
+  }
+} */
