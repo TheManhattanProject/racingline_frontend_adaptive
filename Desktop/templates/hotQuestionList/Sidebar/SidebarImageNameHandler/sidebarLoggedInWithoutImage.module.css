@@ -1,0 +1,79 @@
+.sidebarquoteNotLoggedIn {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
+  color: #adadad;
+  margin: 0px 0px 64px 0px;
+}
+.withoutProfilePicture {
+  width: 176px;
+  height: 176px;
+  background-color: #8ecae6;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  vertical-align: middle;
+  color: #2888c5;
+  line-height: 176px;
+  margin: 0 auto;
+  font-size: 80px;
+}
+.setInitialPositionTrue{
+  position: initial;
+}
+.sidebarname {
+  margin-top: 40px;
+  margin-bottom: 92px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  align-items: center;
+  text-align: center;
+  color: #0a0a0a;
+  margin: 32px 16px 0px 16px;
+}
+.sidebarreputation {
+  font-family: "Montserrat";
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sidebartotalreputation {
+  width: 304px;
+  height: 48px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #adadad;
+}
+.WithoutImageContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.sidebarreputationscount {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #0a0a0a;
+}

@@ -1,0 +1,316 @@
+.flexrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexrow img {
+  /* margin-right: 10px; */
+}
+.setInitialPositionTrue{
+  position: initial;
+}
+.userInfo {
+  display: flex;
+  gap: 15px;
+  @media (max-width: 1500px) {
+    gap: 10px;
+    align-items: center;
+  }
+}
+
+.questioncard {
+  width: 100%;
+  /* min-height: 224px; */
+
+  background: #ffffff;
+  box-shadow: none;
+  border-radius: 30px;
+
+  display: grid;
+  grid-template-columns: 112px 1fr;
+}
+
+.questioncard :hover {
+  cursor: pointer;
+}
+
+.questionContentPart {
+  position: relative;
+  /* margin-bottom: -21px; */
+}
+
+.questioncardheader {
+  justify-content: space-between;
+
+}
+
+.questioncardimage {
+  width: 32px;
+  height: 32px;
+  left: 568px;
+  top: 336px;
+
+  border-radius: 100%;
+  margin-right: 16px;
+  object-fit: cover;
+}
+
+.questioncardupvotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #b5b5b5;
+}
+
+.arrows {
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.questioncardupvotescount {
+  font-family: 'Dev Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #F13E3E;
+}
+
+.questioncardheading {
+  font-family: 'Ostwald';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  color: #E40520;
+  margin: 16px 0px 0px 0px;
+  @media (max-width: 1500px) {
+    font-size: 18px;
+    margin: 8px 0 0 0;
+  }
+}
+
+.questioncardauthorname {
+  height: 32px;
+
+  font-family: "Ostwald";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  color: #070707;
+}
+
+.questioncardfooter {
+  /* position:absolute; */
+  /* margin-bottom: 15px; */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #F13E3E;
+
+  margin-right: 32px;
+}
+
+.questioncardfootertime {
+  /* width: 108px; */
+  height: 16px;
+  /* margin-right: 40px; */
+  font-family: 'Digital Numbers';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 13px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  color: #b5b5b5;
+  @media (max-width: 1500px) {
+    font-size: 8px;
+  }
+}
+
+.questioncardfooterimg {
+  margin-right: 8px;
+}
+
+.questioncardfooterleft {
+  gap: 62px;
+}
+
+.questionfootertext {
+  height: 16px;
+  font-family: 'Dev Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #F13E3E;
+  @media (max-width: 1500px) {
+    font-size: 12px;
+  }
+}
+
+.emptyProfileImageDiv {
+  background-color: #8ecae6;
+  width: 32px;
+  height: 32px;
+  left: 568px;
+  top: 336px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100%;
+  vertical-align: middle;
+  color: #2888c5;
+  line-height: 32px;
+  @media (max-width: 1500px) {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+  }
+}
+
+.reactMarkDown {
+  margin-bottom: 34px;
+  word-break: break-all;
+  margin-top: 12px;
+  @media (max-width: 1500px){
+    margin-top: 5px;
+    margin-bottom: 22px;
+  }
+}
+
+.reactMarkDown p {
+  font-family: "OstwaldL";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.08em;
+  width: 93%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #525252;
+}
+
+.iconContainer {
+  margin-right: 30px;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width:1500px) {
+  .iconContainer {
+    gap: 15px;
+  }
+}
+
+.iconContainer img{
+  position: relative;
+}
+
+.fire {
+  position: relative;
+  height: 34px;
+  width: 30px;
+}
+
+.bookmark {
+  position: relative;
+  width: 22px;
+  height: 32px;
+}
+
+@media screen and (max-width:1500px) {
+  .fire {
+    position: relative;
+    height: 26px;
+    width: 24px;
+  }
+  
+  .bookmark {
+    position: relative;
+    width: 16px;
+    height: 23px;
+  }
+} 
+
+.dash {
+  background-image: url('/static/questions/dash.svg');
+  background-repeat: repeat-x;
+  width: 60px;
+  height: 6px;
+  width: 100%;
+}
+
+.time {
+  /* margin-right: -50px; */
+}
+
+.upDown {
+  /* margin-left: 10px; */
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.profile_picture {
+  border-radius: 100%;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  /* margin-right: 16px; */
+}
+
+@media screen and (max-width: 1500px) {
+  .questioncardheading {
+    font-family: 'Ostwald';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+    text-transform: capitalize;
+
+    color: #E40520;
+  }
+
+  .reactMarkDown p {
+    font-family: "OstwaldL";
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.08em;
+    width: 93%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #525252;
+  }
+} 

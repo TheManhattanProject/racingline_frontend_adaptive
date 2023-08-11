@@ -1,0 +1,143 @@
+.comment {
+  box-sizing: border-box;
+  width: auto;
+  margin-right: 12px;
+  background: #f7f7f7;
+  border-radius: 15px;
+  animation: fadeInAnimation 1s linear;
+  padding: 12px 72px 14px 23px;
+  margin-top: 10px;
+  margin-right: 164px;
+  display: flex;
+  flex-direction: column;  
+  gap: 12px;
+}
+.setInitialPositionTrue{
+  position: initial;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.photo {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 12px;
+  color: #070707;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #898989;
+
+  margin-top: 10px;
+}
+
+.footer {
+  display: flex;
+  gap: 28px;
+  margin-top: 27px;
+}
+
+.footeritem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.footeritems {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.count {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+
+  color: #929292;
+}
+
+.date {
+  font-family: "Montserrat";
+  font-style: normal;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #8F8F8F;
+  margin-left: auto;
+}
+
+.emptyProfileImageDiv {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-color: #8ecae6;
+  text-align: center;
+  border-radius: 50%;
+  vertical-align: middle;
+  color: #2888c5;
+  line-height: 28px;
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.namediv{
+  display: flex;
+  align-items: center;
+}
+
+/* @media (max-width: 1341px) and (min-width: 1000px){
+  .comment{
+    width: 900px
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 1000px){
+  .comment{
+    width: 800px
+  }
+}
+
+@media (max-width: 1144px) and (min-width: 1000px){
+  .comment{
+    width: 700px
+  }
+}
+
+@media (max-width: 1039px) and (min-width: 1000px){
+  .comment{
+    width: 668px
+  }
+} */

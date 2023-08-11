@@ -13,7 +13,9 @@
     text-align: left;
     color: #898989;
 }
-
+.setInitialPositionTrue{
+    position: initial;
+}
 .hotimg{
     width: 100%;
     height: auto;

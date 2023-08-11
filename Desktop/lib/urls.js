@@ -8,5 +8,6 @@ const CreateAnswer = `${domain}auth/create-answer/`;
 const CreateQuestion = `${domain}auth/create-question/`;
 const Questionlt = `${domain}questions-list/`;
 const QuestionltAth = `${domain}auth/questions-list/`;
+const CreateCommentQuestion = `${domain}auth/create-comment-for-question/`;
 
-export { login, signup, RefreshToken, HotQuestionsUrl, CreateAnswer, CreateQuestion, Questionlt, QuestionltAth };
+export { login, signup, RefreshToken, HotQuestionsUrl, CreateAnswer, CreateQuestion, Questionlt, QuestionltAth, CreateCommentQuestion };
