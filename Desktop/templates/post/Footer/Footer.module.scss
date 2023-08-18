@@ -1,0 +1,76 @@
+.footerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Ostwald";
+  padding: 2.5rem;
+  padding-bottom: 4rem;
+  overflow: hidden;
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .menu {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      list-style: none;
+
+      li {
+        min-width: 50px;
+      }
+    }
+    .title {
+      color: #d40000;
+      font-size: 1.2rem;
+      font-weight: 800;
+    }
+    .upperMenu {
+      display: flex;
+      gap: 2rem;
+    }
+    .lowerMenu {
+      display: flex;
+      gap: 2rem;
+    }
+  }
+  .rightSection {
+    .companyLogo {
+      position: relative;
+      height: 60px;
+      width: 400px;
+      .logoImg {
+        object-fit: cover;
+      }
+    }
+    .copyright {
+      margin-left: 3rem;
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-top: 0.4rem;
+    }
+  }
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    .leftSection {
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      .title {
+        font-size: 1rem;
+      }
+    }
+    .rightSection {
+      .companyLogo {
+        width: 340px;
+        height: 40px;
+        left: -22px;
+      }
+      .copyright {
+        margin-left: 0rem;
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

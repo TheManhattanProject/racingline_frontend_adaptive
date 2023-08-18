@@ -1,0 +1,13 @@
+.container {
+  h2 {
+    color: #d40000;
+    font-family: "OstwaldEL";
+    font-size: 36px;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 36px;
+    }
+  }
+}

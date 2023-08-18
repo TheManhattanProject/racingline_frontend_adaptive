@@ -1,0 +1,59 @@
+.sectionHeading {
+    color: #d40000;
+    font-family: "OstwaldEL";
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sectionHeading span {
+    font-family: "OstwaldEL";
+    font-size: 16px;
+    margin-left: 0.7rem;
+}
+
+.trophyContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    column-gap: 1.2rem;
+}
+
+.textContainer {
+    width: 346px;
+    font-size: 42px;
+    line-height: 42px;
+    font-family: "Dev Gothic";
+    color: #282828;
+}
+
+@media (max-width:625px) {
+    .textContainer {
+        width: 250px;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sectionHeading span {
+
+
+        font-size: 1.4rem;
+    }
+
+    .trophyContainer {
+        margin-top: 50px;
+    }
+
+    .cupImg {
+        width: 86px;
+        height: 88px;
+    }
+
+    .textContainer {
+        width: 233px;
+        font-size: 32px;
+    }
+}

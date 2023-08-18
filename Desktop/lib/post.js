@@ -1,4 +1,5 @@
 import { asyncHandler } from "@/middleware/error";
+import { getAccessToken } from "./tokens";
 
 export default asyncHandler(async function post({ url, cookies, body }) {
     var { status, token } = await getAccessToken(cookies);

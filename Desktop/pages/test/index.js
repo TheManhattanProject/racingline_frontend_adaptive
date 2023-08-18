@@ -4,6 +4,7 @@ import Sidebar from '../../components/layouts/Sidebar/Sidebar';
 const X = ({ a }) => {
   return <h1> {a} </h1>;
 };
+
 const layouts = {
   '/question_list': {
     left: (reputation) => (

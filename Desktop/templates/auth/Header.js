@@ -1,8 +1,5 @@
-import React from "react";
-import styles from "./Header.module.scss";
 import Image from "next/image";
-import logoImg from "../../public/dstatic/home/logo.png";
-import arrowImg from "../../public/dstatic/auth/arrowLeft.png";
+import styles from "./Header.module.scss";
 
 function Header() {
   return (
@@ -13,11 +10,11 @@ function Header() {
           history.back();
         }}
       >
-        <Image alt={"Back Arrow"} src={arrowImg} className={styles.img} fill />
+        <Image alt={"Back Arrow"} src="/dstatic/auth/arrowLeft.png" className={styles.img} fill />
       </figure>
       <figure className={styles.logo}>
         <Image
-          src={logoImg}
+          src="/dstatic/home/logo.png"
           alt={"RacingLine Logo"}
           className={styles.img}
           fill

@@ -1,14 +1,13 @@
-import styles from "./Sidebar.module.scss";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import Image from "next/image";
-import OptionsList from "./OptionList/OptionsList";
 import useAuthUser from "@/hooks/useAuthUser";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import OptionsList from "./OptionList/OptionsList";
+import styles from "./Sidebar.module.scss";
 
-const Sidebar = () => { 
+const Sidebar = () => {
   const [isLoggedIn, { first_name, last_name, profile_img, reputation }] = useAuthUser();
   const pathname = usePathname()
-
   return (
     <div className={`thesidebar ${styles.sidebar}`}>
       <Image
@@ -50,7 +49,7 @@ const Sidebar = () => {
       </div>
       <hr className={styles.hr} />
       <div className={styles.listitems}>
-          <OptionsList page={pathname}/>
+        <OptionsList page={pathname} />
       </div>
     </div>
   );

@@ -1,22 +1,12 @@
-// import Sidebar from "/components/hotquestions/DesktopVersion/Sidebar/Sidebar.js";
-import styles from "./index.module.scss";
-import Heading from "../HeadingforHotQuest/Heading";
 import Questions from "../Questions/Questions";
-import Footer from "../FooterforHotQues/Footer";
-// import Background from "/components/hotquestions/DesktopVersion/Background/Background.js";
-import Leaderboard from "../Leaderboard/Leaderboard";
-import Pagechange from "../Pagechange/PageChange";
-import Sidebar from "../Sidebar/Sidebar";
-import RacetrackImg from "../RacetrackImg/RacetrackImg";
-// import PageChangeMobile from "../Pagechange/PageChangeMobile";
-
+import styles from "./index.module.scss";
 export default function DesktopView(props) {
   console.log(props);
   return (
     <div className={styles.parentdiv}>
       {/* <div className={styles.sidebarDesign} /> */}
       <div className={styles.Background}>
-        <Heading />
+        {/* <Heading /> */}
         <div className={styles.flex}>
           <div className={styles.sidebarcontainer}>
             {/* {props.Post.reputation !== undefined ? (
@@ -24,7 +14,7 @@ export default function DesktopView(props) {
             ) : (
               <Sidebar />
             )} */}
-            <Sidebar page="HotQuestions" />
+            {/* <Sidebar page="HotQuestions" /> */}
           </div>
           <div className={styles.questionsDiv}>
             <div className={styles.dash}></div>
@@ -49,22 +39,22 @@ export default function DesktopView(props) {
             </div> */}
           </div>
           <div className={styles.leaderboardcontainer}>
-            <Leaderboard LeaderArray={props.Post} />
+            {/* <Leaderboard LeaderArray={props.Post} /> */}
           </div>
         </div>
         <div className={styles.pagechangecontainer}>
-          {props.Post == null ? (
+          {/* {props.Post == null ? (
             <div></div>
           ) : (
-            <Pagechange
-              CurrentPage={props.Post.currentPage}
-              NoOfPages={props.Post.noOfPages}
-            />
-          )}
+            // <Pagechange
+            //   CurrentPage={props.Post.currentPage}
+            //   NoOfPages={props.Post.noOfPages}
+            // />
+          )} */}
         </div>
       </div>
-      <RacetrackImg/>
-      <Footer/>
+      {/* <RacetrackImg /> */}
+      {/* <Footer /> */}
     </div>
   );
 }

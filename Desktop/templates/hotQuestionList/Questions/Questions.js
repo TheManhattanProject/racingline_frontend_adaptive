@@ -1,14 +1,15 @@
-import styles from "./Questions.module.css";
-
+import { dateToString } from "@/lib/utils";
 import QuestionCard from "./QuestionCard/QuestionCard";
-import dateHandlerToString from "../DateHandlerToString/datehandlerToString";
+import styles from "./Questions.module.css";
 
 const Questions = (props) => {
   console.log(props)
   return (
     <div className={styles.questions}>
+      <div className={styles.dash}></div>
+
       {props.Post.detail.map((data) => {
-        const time = dateHandlerToString(data.created_at);
+        const time = dateToString(data.created_at);
         const date = new Date(data.created_at);
         const day = date.getDate();
         const month = date.toLocaleString('default', { month: 'short' })

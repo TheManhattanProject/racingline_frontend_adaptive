@@ -1,0 +1,66 @@
+.optionCard {
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	span {
+		color: #adadad;
+		font-family: 'Dev Gothic';
+		position: relative;
+		top: 2px;
+	}
+	.key {
+		font-family: 'Dev Gothic';
+		color: #f13e3e;
+		font-size: 1.2rem;
+		position: relative;
+		top: 2px;
+		width: 100px;
+		ont-family: 'Dev Gothic';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 25px;
+		line-height: 25px;
+		display: flex;
+		align-items: center;
+
+		/* RL/Secondary Red-S */
+
+		color: #f13e3e;
+	}
+	.value {
+		font-family: 'Ostwald';
+		color: #adadad;
+		font-size: 0.8rem;
+		width: 75%;
+		border: none;
+		outline: none;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 27px;
+		/* identical to box height */
+
+		display: flex;
+		align-items: center;
+		letter-spacing: 0.04em;
+
+		color: #adadad;
+	}
+
+	@media (max-width: 600px) {
+		gap: 12px;
+
+		span {
+			font-family: 0.9rem;
+		}
+		.key {
+			font-size: 1.25rem;
+		}
+		.value {
+			font-size: 1rem;
+		}
+	}
+}
+.cross {
+	font-size: 24px;
+}

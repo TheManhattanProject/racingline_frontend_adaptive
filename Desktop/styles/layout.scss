@@ -1,0 +1,44 @@
+.layout {
+	display: block;
+	// overflow-x: hidden !important;
+	background: #f9f9f9;
+}
+
+.layoutContainer {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	margin-top: 40px;
+	@media (max-width: 1200px) {
+		margin-top: 20px;
+	}
+}
+
+.layoutLeft {
+	margin-left: 20px;
+	background: #f9f9f9;
+	margin-right: 90px;
+	@media (max-width: 1500px) {
+		margin-right: 75px;
+	}
+	@media (max-width: 1200px) {
+		margin-right: 80px;
+	}
+}
+
+.layoutRight {
+	margin-right: 24px;
+	margin-left: 60px;
+	@media (max-width: 1500px) {
+		margin-left: 50px;
+	}
+	@media (max-width: 1200px) {
+		display: none;
+	}
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 40px;
+}

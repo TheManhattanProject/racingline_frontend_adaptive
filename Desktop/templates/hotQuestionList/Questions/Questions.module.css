@@ -21,10 +21,14 @@
   margin-bottom: 16px;
 }
 
-
+.dash {
+  background: url("/dstatic/questions/dash.svg");
+  height: 6px;
+  background-repeat: repeat-x;
+}
 
 @media screen and (max-width:1280px) {
   .questions {
-      margin-right: 0px;
-    }
+    margin-right: 0px;
+  }
 }

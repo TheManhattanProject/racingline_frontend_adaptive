@@ -1,14 +1,13 @@
-import React, { useEffect, useState, useCallback } from "react";
+import Image from "next/image";
 import { useRouter } from "next/router";
+import { useCallback, useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { signup } from "../../../lib/urls";
-import styles from "./Register.module.scss";
-import Image from "next/image";
-import Header from "../Header";
 import Footer from "../Footer";
-import racecarImg from "../../../public/dstatic/auth/racecar.png";
+import Header from "../Header";
 import SubmitBtn from "../SubmitBtn";
 import TagInput from "../TagInput";
+import styles from "./Register.module.scss";
 
 const EMAIL_REGEX = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,10}$/;
 function Register() {
@@ -155,7 +154,7 @@ function Register() {
           sameSite: true,
         });
         console.log("This is result", result);
-        router.push("/question_list");
+        // router.push("/question_list");
       } catch (e) {
         setError(true);
         setLoading(false);
@@ -178,11 +177,11 @@ function Register() {
       <Header />
       <main className={styles.main}>
         <section className={styles.legendSection}>
-        <Image className={styles.legend}
+          <Image className={styles.legend}
             src="/dstatic/auth/racecar.png"
             priority
             alt={"race car"}
-            fill 
+            fill
           />
         </section>
         {/* for <1.6 */}
@@ -333,48 +332,48 @@ function Register() {
               <div className={`${styles.bottomBorder} ${emptyLastName && styles.error}`}></div>
             </div>
           </div>
-            <div className={`${styles.inputContainer} ${emptyEmail && styles.error}`}>
-              {error && <div className={styles.errorMsg}>*This e-mail already exists</div>}
-              {!validEmail && <div className={styles.errorMsg}>*This e-mail is invalid</div>}
+          <div className={`${styles.inputContainer} ${emptyEmail && styles.error}`}>
+            {error && <div className={styles.errorMsg}>*This e-mail already exists</div>}
+            {!validEmail && <div className={styles.errorMsg}>*This e-mail is invalid</div>}
+            <input
+              className={`${styles.input} `}
+              placeholder={"e-mail"}
+              value={email}
+              type="email"
+              onChange={(e) => {
+                setVaildEmail(EMAIL_REGEX.test(email));
+                setEmptyEmail(false);
+                setEmail(e.target.value);
+              }}
+              required
+            />
+            <div className={`${styles.bottomBorder} ${emptyEmail && styles.error}`}></div>
+          </div>
+          <div className={styles.inputWrapper}>
+            <div className={`${styles.inputContainer} ${emptyPwd && styles.error}`}>
               <input
                 className={`${styles.input} `}
-                placeholder={"e-mail"}
-                value={email}
-                type="email"
+                placeholder={"password"}
+                value={password}
+                type="password"
                 onChange={(e) => {
-                  setVaildEmail(EMAIL_REGEX.test(email));
-                  setEmptyEmail(false);
-                  setEmail(e.target.value);
+                  setEmptyPwd(false);
+                  setPassword(e.target.value);
                 }}
                 required
               />
-              <div className={`${styles.bottomBorder} ${emptyEmail && styles.error}`}></div>
+              <div className={`${styles.bottomBorder} ${emptyPwd && styles.error}`}></div>
             </div>
-            <div className={styles.inputWrapper}>
-              <div className={`${styles.inputContainer} ${emptyPwd && styles.error}`}>
-                <input
-                  className={`${styles.input} `}
-                  placeholder={"password"}
-                  value={password}
-                  type="password"
-                  onChange={(e) => {
-                    setEmptyPwd(false);
-                    setPassword(e.target.value);
-                  }}
-                  required
-                />
-                <div className={`${styles.bottomBorder} ${emptyPwd && styles.error}`}></div>
-              </div>
           </div>
-            <div className={styles.inputContainer}>
-              <TagInput
-                getTags={getTags}
-                activeTagHandler={setActiveTag}
-                interestedTags={interestedTags}
-                tags={[]}
+          <div className={styles.inputContainer}>
+            <TagInput
+              getTags={getTags}
+              activeTagHandler={setActiveTag}
+              interestedTags={interestedTags}
+              tags={[]}
 
-              />
-            
+            />
+
           </div>
           <div className={styles.tagArea}>
             {!interestedTags.length && <span className={styles.suggest}>Eg. F1 Racing</span>}
@@ -399,7 +398,7 @@ function Register() {
             </div> */}
         </section>
       </main>
-      <Footer state={"signUp"}  onClickHandler={submitHandler} loading={loading}/>
+      <Footer state={"signUp"} onClickHandler={submitHandler} loading={loading} />
     </div>
   );
 }

@@ -1,0 +1,254 @@
+.setInitialPositionTrue {
+	position: initial;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	@media (max-width: 600px) {
+		gap: 0;
+	}
+	.questionContainer,
+	.tagsContainer,
+	.descriptionContainer {
+		display: flex;
+		gap: 2.5rem;
+		figure {
+			position: relative;
+			width: 10px;
+			.img {
+				object-fit: fill;
+			}
+			@media (max-width: 600px) {
+				display: none;
+			}
+		}
+	}
+	h2 {
+		text-transform: capitalize;
+		font-family: 'OstwaldB';
+
+		font-size: 42px;
+		letter-spacing: 1px;
+		@media (max-width: 1500px) {
+			font-size: 30px;
+		}
+	}
+	p {
+		font-family: 'OstwaldEL';
+		letter-spacing: 0.5px;
+		color: #282828;
+		font-size: 24px;
+		@media (max-width: 1280px) {
+			font-size: 20px;
+		}
+	}
+	.btnWrapper {
+		width: 100%;
+		.postBtn {
+			display: block;
+			padding: 16px;
+			width: 180px;
+			font-family: 'Ostwald';
+			font-size: 1.2rem;
+			letter-spacing: 1px;
+			background-color: #343434;
+			border-radius: 8px;
+			cursor: pointer;
+			color: #f9f9f9;
+			border: none;
+			border-radius: 1;
+			margin-left: auto;
+		}
+		@media (max-width: 600px) {
+			.postBtn {
+				width: 100%;
+				margin-top: 1rem;
+			}
+		}
+	}
+	.inputWrapper {
+		input {
+			padding: 1rem;
+			margin: 0.5rem 0;
+			border: none;
+			width: 100%;
+			font-family: 'Ostwald';
+			font-size: 24px;
+			letter-spacing: 0.5px;
+			&::placeholder {
+				color: #a19d9a;
+			}
+			&:focus {
+				outline: none;
+			}
+			@media (max-width: 1500px) {
+				padding: 5px 0;
+			}
+			@media (max-width: 600px) {
+				padding: 0.2rem 1rem;
+				position: relative;
+				top: -2px;
+			}
+			@media (max-width: 1280px) {
+				font-size: 20px;
+			}
+		}
+		hr {
+			border-top: 2px solid #cccccc;
+		}
+	}
+}
+
+.questionWrapper,
+.tagsWrapper,
+.decriptionWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 95%;
+	padding: 1rem 0 1.4rem 0;
+	@media (max-width: 1500px) {
+		gap: 0;
+	}
+	@media (max-width: 600px) {
+		padding: 1rem 0;
+		gap: 16px;
+	}
+
+	// .textArea{
+	//     .CodeMirror-scroll{
+	//         height: 200px !important;
+	//     }
+	// }
+}
+
+.tagList {
+	display: flex;
+	align-items: center;
+	gap: 0px;
+	margin-top: 1rem;
+	flex-wrap: wrap;
+	width: 100%;
+	div {
+		border: 1px solid black;
+		padding: 0.3rem 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+		&:nth-child(odd) {
+			background-color: black;
+			color: white;
+			button {
+				color: white;
+			}
+		}
+
+		button {
+			display: block;
+			background-color: transparent;
+			border: none;
+		}
+	}
+}
+.questionWrapper {
+	h2 {
+		font-style: normal;
+		font-weight: 900;
+		font-size: 42px;
+		line-height: 62px;
+		letter-spacing: 0.03em;
+		text-transform: capitalize;
+		color: #0a0a0a;
+		@media (max-width: 1500px) {
+			font-size: 30px;
+			line-height: 44px;
+		}
+	}
+	div input {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 36px;
+		letter-spacing: 0.08em;
+		color: #a19d9a;
+	}
+
+	@media (max-width: 600px) {
+		h2 {
+			font-size: 28px;
+		}
+		div input {
+			font-size: 20px;
+		}
+		p {
+			font-size: 20px;
+		}
+	}
+}
+.tagsWrapper,
+.decriptionWrapper {
+	h2 {
+		font-style: normal;
+		font-weight: 900;
+		font-size: 42px;
+		line-height: 62px;
+		letter-spacing: 0.03em;
+		text-transform: capitalize;
+		color: #0a0a0a;
+	}
+	p {
+		font-style: normal;
+		font-weight: 300;
+		font-size: 24px;
+		line-height: 36px;
+		letter-spacing: 0.08em;
+		color: #282828;
+	}
+	div input {
+		font-style: normal;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 36px;
+		letter-spacing: 0.08em;
+		color: #a19d9a;
+	}
+	@media (max-width: 1500px) {
+		h2 {
+			font-size: 30px;
+			line-height: 44px;
+		}
+		div input {
+			font-size: 18px;
+			line-height: 26.68px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 26.68px;
+		}
+		gap: 0px;
+		.inputWrapper {
+			margin-top: 0;
+		}
+		.aeoifhaweif {
+			padding-top: 24px !important;
+			padding-bottom: 0;
+		}
+	}
+}
+
+.decriptionWrapper {
+	hr {
+		&:first-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.pt {
+	margin-top: 16px;
+	hr {
+		margin: 12px 0;
+	}
+}

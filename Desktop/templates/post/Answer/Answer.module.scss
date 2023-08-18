@@ -1,0 +1,80 @@
+.answerContainer {
+  font-family: "OstwaldEL";
+  padding: 2rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    figure {
+      position: relative;
+      height: 30px;
+      width: 30px;
+      display: flex;
+      margin-bottom: 0px;
+      .img {
+        object-fit: contain;
+      }
+    }
+    span {
+      font-family: "Dev Gothic";
+      font-size: 1.3rem;
+      font-weight: 100;
+    }
+  }
+  .answer{
+    margin-left: 1.8rem;
+    margin-top: 0.7rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+    padding: 24px 0.5rem;
+    .answer{
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+  }
+}
+.votes{
+    margin-top: 2rem;
+}
+
+.answerHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookmarkContainer{
+  position: relative;
+  height: 24px;
+  width: 17px;
+  cursor: pointer;
+  .img{
+    object-fit: contain;
+  }
+}
+.reactmarkdown{
+  word-break: break-word;
+}
+.reactmarkdown p img{
+  width: 300px;
+  height: 300px;
+}
+
+.emptyProfileImageDiv {
+  background-color: #8ecae6;
+  width: 30px;
+  height: 30px;
+  left: 568px;
+  top: 336px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100%;
+  // margin-right: 16px;
+  // vertical-align: middle;
+  color: #2888c5;
+  line-height: 30px;
+  font-size: 1rem;
+}

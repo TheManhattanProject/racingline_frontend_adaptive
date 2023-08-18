@@ -1,0 +1,123 @@
+.header {
+  display: flex;
+  max-height: 50px;
+  font-family: "Ostwald";
+  .headerItems {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    figure {
+      position: relative;
+      display: inline-block;
+      height: 50px;
+      width: 300px;
+      margin: 0;
+      @media (max-width: 900px) {
+        height: 50px;
+        width: 250px;
+      }
+      @media (max-width: 700px) {
+        height: 40px;
+        width: 200px;
+      }
+
+      .logoImg {
+        object-fit: cover;
+      }
+    }
+    nav {
+      margin-right: 3rem;
+      ul {
+        display: flex;
+        gap: 2rem;
+        text-decoration: none;
+        list-style: none;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        padding-left: 0;
+      }
+      @media (max-width: 900px) {
+        margin-right: 1rem;
+        font-size: 0.8rem;
+      }
+      @media (max-width: 850px) {
+        ul{
+          gap: 1rem;
+        }
+      }
+      @media (max-width: 700px) {
+        margin-right: 0.5rem;
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    background-color: #f0f0f0;
+    .headerItems {
+      figure {
+        position: relative;
+        left: -18px;
+        height: 40px;
+        width: 200px;
+      }
+      nav {
+        display: none;
+      }
+    }
+  }
+}
+
+.mobileMenu {
+  display: none;
+  width: 100px;
+  height: 55px;
+  background-image: url("../../../public/images/mobileMenu.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .hamburgerMenu {
+    cursor: pointer;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 17px;
+
+    .bar {
+      background-color: #ffffff;
+      height: 2.5px;
+      width: 100%;
+      border-radius: 1rem;
+    }
+  }
+  @media (max-width: 600px) {
+    display: flex;
+  }
+}
+.mobileTrophyImg {
+  display: none;
+  .trophyContainer {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    .logoImg {
+      object-fit: contain;
+    }
+  }
+  @media (max-width: 600px) {
+    display: block;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link a:link {
+  color: black;
+}

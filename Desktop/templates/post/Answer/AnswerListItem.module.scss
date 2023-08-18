@@ -1,0 +1,17 @@
+.commentListWrapper{
+    margin-top: 30px;
+    margin-left: 110px;
+    @media (max-width: 1500px) {
+
+      margin-left: 90px;
+    }
+    @media (max-width: 1200px) {
+
+      margin-left: 75px;
+    }
+}
+
+.answerContainer{
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+}

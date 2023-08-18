@@ -1,0 +1,47 @@
+.answersSectionContainer {
+  .sectionHeading {
+    color: #d40000;
+    font-family: "OstwaldEL";
+    font-size: 48px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    font-weight: 600;
+    @media (max-width: 1500px) {
+      font-size: 42px;
+      //margin-bottom: 35px;
+      margin-left: 38px;
+    }
+    @media (max-width: 1200px) {
+      font-size: 36px;
+      //margin-bottom: 28px;
+      margin-left: 42px;
+    }
+
+    span {
+      font-family: "OstwaldEL";
+      font-size: 16px;
+      margin-left: 0.7rem;
+    }
+  }
+
+}
+
+.viewMoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #ffffff;
+  border-radius: 1px solid black;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 3rem;
+  font-family: 'Ostwald';
+  font-size: 1.2rem;
+  .btnImg {
+    display: block;
+    position: relative;
+    height: 20px;
+    width: 20px;
+  }
+}

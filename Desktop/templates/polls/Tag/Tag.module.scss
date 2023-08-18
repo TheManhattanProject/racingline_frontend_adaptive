@@ -1,0 +1,36 @@
+.tagsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	word-wrap: break-word;
+	word-break: break-all;
+	div {
+		word-break: break-word;
+		text-align: center;
+		text-transform: capitalize;
+		border: 1px solid black;
+		width: 130px;
+		height: 35px;
+		display: flex;
+		justify-content: center;
+		font-size: 14px;
+		align-items: center;
+		&:nth-child(odd) {
+			background-color: black;
+			color: white;
+		}
+	}
+	@media (max-width: 1500px) {
+		div {
+			font-size: 12px;
+			height: 28px;
+			width: 98px;
+		}
+	}
+	@media (max-width: 650px) {
+		div {
+			font-size: 14px;
+			height: 32px;
+			width: 110px;
+		}
+	}
+}

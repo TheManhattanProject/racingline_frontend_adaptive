@@ -1,12 +1,10 @@
-import styles from "./QuestionCard.module.css";
-import ReactMarkdown from "react-markdown";
-import { useRouter } from "next/router";
 import Image from "next/image";
-import { useMemo } from "react";
 import Link from "next/link";
+import { useMemo } from "react";
+import ReactMarkdown from "react-markdown";
+import styles from "./QuestionCard.module.css";
 
 const QuestionCard = (props) => {
-  const router = useRouter();
   const imageStyle = {
     objectFit: "cover",
     verticalAlign: "top",
@@ -22,7 +20,7 @@ const QuestionCard = (props) => {
               alt={`Profile picture of ${props.FirstName}`}
               width={32}
               height={32}
-              fill={true}
+
               className={styles.setInitialPositionTrue}
             />
           </div>
@@ -53,7 +51,7 @@ const QuestionCard = (props) => {
                   width={18}
                   height={20}
                   className={styles.setInitialPositionTrue}
-                  fill={true}
+
                 />
               </div>
               <div className={styles.arrows}>
@@ -63,7 +61,7 @@ const QuestionCard = (props) => {
                   width={18}
                   height={20}
                   className={styles.setInitialPositionTrue}
-                  fill={true}
+
                 />
               </div>
             </div>
@@ -96,6 +94,7 @@ const QuestionCard = (props) => {
                       src="/dstatic/hotquestions/sidebar/bookmarkIcon.svg"
                       alt="Bookmark"
                       fill={true}
+
                       className={styles.setInitialPositionTrue}
                     />
                   </div>
@@ -118,7 +117,7 @@ const QuestionCard = (props) => {
                       className={styles.setInitialPositionTrue}
                       height={9.56}
                       width={11.48}
-                      fill={true}
+
                     />
                   </div>
                   <div className={styles.questionfootertext}>
@@ -133,7 +132,7 @@ const QuestionCard = (props) => {
                       className={styles.setInitialPositionTrue}
                       height={9}
                       width={13}
-                      fill={true}
+
                     />
                   </div>
                   <div className={styles.questionfootertext}>
@@ -149,7 +148,7 @@ const QuestionCard = (props) => {
                     className={styles.setInitialPositionTrue}
                     height={11.67}
                     width={11.67}
-                    fill={true}
+
                   />
                 </div>
 

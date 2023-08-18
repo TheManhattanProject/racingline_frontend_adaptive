@@ -1,0 +1,18 @@
+.questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.dash {
+  background: url("../../public/dstatic/questions/dash.svg");
+  height: 6px;
+  background-repeat: repeat-x;
+}
+
+@media screen and (max-width: 1350px) {
+  .questions {
+    gap: 20px;
+  }
+}

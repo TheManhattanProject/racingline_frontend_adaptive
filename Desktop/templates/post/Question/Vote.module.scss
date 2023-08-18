@@ -1,0 +1,49 @@
+.voteContainer {
+  display: flex;
+  gap: 120px;
+  div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    span {
+      font-size: 1.8rem;
+      font-family: 'Dev Gothic';
+    }
+    figure {
+      cursor: pointer;
+      position: relative;
+      height: 38px;
+      width: 38px;
+      margin-bottom: 0px;
+      .voteimg {
+        object-fit: contain;
+      }
+    }
+  }
+  @media (max-width: 1500px) {
+    gap: 105px;
+    div{
+      figure{
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    gap: 85px;
+    div{
+      figure{
+        height: 28px;
+        width: 28px;
+      }
+    }
+  }
+
+}
+
+.upvoteContainer {
+  span {
+    color: red;
+  }
+}

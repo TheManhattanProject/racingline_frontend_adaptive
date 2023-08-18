@@ -1,0 +1,103 @@
+.optionContainer {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  @media (max-width: 650px) {
+	gap: 12px;
+  }
+
+  // .radioWrapper {
+  // }
+  .radioWrapper {
+    input {
+      height: 28px;
+      width: 28px;
+      @media (max-width: 1500px) {
+        height: 21px;
+        width: 21px;
+      }
+      @media (max-width: 650px) {
+        height: 28px;
+        width: 28px;
+      }
+    }
+  }
+
+  .optionWrapper {
+    width: 100%;
+    .percentagemob {
+      display: none;
+      @media (max-width: 650px) {
+        display: block;
+        color: #525252;
+		margin-top: 8px ;
+		margin-bottom: 12px;
+		line-height: 1;
+		font-size: 18px;
+      }
+    }
+    .optionText {
+      font-family: "Ostwald";
+      text-transform: capitalize;
+      font-size: 20px;
+      word-wrap: break-word;
+      max-width: 85%;
+      line-height: 1;
+      @media (max-width: 1500px) {
+        font-size: 16px;
+        margin-top: 2px;
+      }
+      @media (max-width: 650px) {
+        font-size: 20px;
+        margin-top: 2px;
+      }
+      @media (max-width: 600px) {
+        max-width: 100%;
+      }
+      word-break: break-all;
+    }
+
+    .progressBarContainer {
+      margin-top: 12px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      @media (max-width: 1500px) {
+        margin-top: 8px;
+      }
+      .progressBar {
+        background-color: #f0f0f0;
+        width: 85%;
+        border-radius: 4px;
+        @media (max-width: 600px) {
+          width: 100%;
+        }
+        .progress {
+          height: 25px;
+          background-color: #f13e3e;
+          width: 0%;
+          border-radius: 4px;
+        }
+      }
+
+      .percentage {
+        color: #a19d9a;
+      }
+      @media (max-width: 600px) {
+        .percentagemob {
+          display: block;
+        }
+        .progressBar {
+          .progress {
+            height: 20px;
+          }
+        }
+        .percentage {
+          display: none;
+        }
+      }
+    }
+  }
+}
